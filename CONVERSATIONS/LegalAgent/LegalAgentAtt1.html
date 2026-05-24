@@ -1,0 +1,3570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Analysis of Lease and Valuation Reports</title>
+    <style>
+@import"https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap";
+@layer components;
+
+@layer properties {
+    @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+
+        *,
+        :before,
+        :after,
+        ::backdrop {
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-scale-z: 1;
+            --tw-space-y-reverse: 0;
+            --tw-divide-y-reverse: 0;
+            --tw-border-style: solid;
+            --tw-leading: initial;
+            --tw-font-weight: initial;
+            --tw-tracking: initial;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-color: initial;
+            --tw-shadow-alpha: 100%;
+            --tw-inset-shadow: 0 0 #0000;
+            --tw-inset-shadow-color: initial;
+            --tw-inset-shadow-alpha: 100%;
+            --tw-ring-color: initial;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-inset-ring-color: initial;
+            --tw-inset-ring-shadow: 0 0 #0000;
+            --tw-ring-inset: initial;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-outline-style: solid
+        }
+    }
+}
+
+@layer theme {
+
+    :root,
+    :host {
+        --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --spacing: .25rem;
+        --container-md: 28rem;
+        --container-4xl: 56rem;
+        --text-xs: .75rem;
+        --text-xs--line-height: calc(1/.75);
+        --text-sm: .875rem;
+        --text-sm--line-height: calc(1.25/.875);
+        --text-base: 1rem;
+        --text-base--line-height: 1.5;
+        --text-lg: 1.125rem;
+        --text-lg--line-height: calc(1.75/1.125);
+        --text-xl: 1.25rem;
+        --text-xl--line-height: calc(1.75/1.25);
+        --text-2xl: 1.5rem;
+        --text-2xl--line-height: calc(2/1.5);
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+        --tracking-tight: -.025em;
+        --animate-spin: spin 1s linear infinite;
+        --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1)infinite;
+        --default-transition-duration: .15s;
+        --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        --default-font-family: var(--font-sans);
+        --default-mono-font-family: var(--font-mono)
+    }
+}
+
+@layer base {
+
+    *,
+    :after,
+    :before,
+    ::backdrop {
+        box-sizing: border-box;
+        border: 0 solid;
+        margin: 0;
+        padding: 0
+    }
+
+    ::file-selector-button {
+        box-sizing: border-box;
+        border: 0 solid;
+        margin: 0;
+        padding: 0
+    }
+
+    html,
+    :host {
+        -webkit-text-size-adjust: 100%;
+        tab-size: 4;
+        line-height: 1.5;
+        font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+        font-feature-settings: var(--default-font-feature-settings, normal);
+        font-variation-settings: var(--default-font-variation-settings, normal);
+        -webkit-tap-highlight-color: transparent
+    }
+
+    hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px
+    }
+
+    abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: inherit;
+        font-weight: inherit
+    }
+
+    a {
+        color: inherit;
+        -webkit-text-decoration: inherit;
+        text-decoration: inherit
+    }
+
+    b,
+    strong {
+        font-weight: bolder
+    }
+
+    code,
+    kbd,
+    samp,
+    pre {
+        font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+        font-feature-settings: var(--default-mono-font-feature-settings, normal);
+        font-variation-settings: var(--default-mono-font-variation-settings, normal);
+        font-size: 1em
+    }
+
+    small {
+        font-size: 80%
+    }
+
+    sub,
+    sup {
+        vertical-align: baseline;
+        font-size: 75%;
+        line-height: 0;
+        position: relative
+    }
+
+    sub {
+        bottom: -.25em
+    }
+
+    sup {
+        top: -.5em
+    }
+
+    table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse
+    }
+
+    :-moz-focusring {
+        outline: auto
+    }
+
+    progress {
+        vertical-align: baseline
+    }
+
+    summary {
+        display: list-item
+    }
+
+    ol,
+    ul,
+    menu {
+        list-style: none
+    }
+
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+        vertical-align: middle;
+        display: block
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto
+    }
+
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+        font: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        opacity: 1;
+        background-color: #0000;
+        border-radius: 0
+    }
+
+    ::file-selector-button {
+        font: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        opacity: 1;
+        background-color: #0000;
+        border-radius: 0
+    }
+
+    :where(select:is([multiple], [size])) optgroup {
+        font-weight: bolder
+    }
+
+    :where(select:is([multiple], [size])) optgroup option {
+        padding-inline-start: 20px
+    }
+
+    ::file-selector-button {
+        margin-inline-end: 4px
+    }
+
+    ::placeholder {
+        opacity: 1
+    }
+
+    @supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px) {
+        ::placeholder {
+            color: currentColor
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            ::placeholder {
+                color: color-mix(in oklab, currentcolor 50%, transparent)
+            }
+        }
+    }
+
+    textarea {
+        resize: vertical
+    }
+
+    ::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    ::-webkit-date-and-time-value {
+        min-height: 1lh;
+        text-align: inherit
+    }
+
+    ::-webkit-datetime-edit {
+        display: inline-flex
+    }
+
+    ::-webkit-datetime-edit-fields-wrapper {
+        padding: 0
+    }
+
+    ::-webkit-datetime-edit {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-year-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-month-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-day-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-hour-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-minute-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-second-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-millisecond-field {
+        padding-block: 0
+    }
+
+    ::-webkit-datetime-edit-meridiem-field {
+        padding-block: 0
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        line-height: 1
+    }
+
+    :-moz-ui-invalid {
+        box-shadow: none
+    }
+
+    button,
+    input:where([type=button], [type=reset], [type=submit]) {
+        appearance: button
+    }
+
+    ::file-selector-button {
+        appearance: button
+    }
+
+    ::-webkit-inner-spin-button {
+        height: auto
+    }
+
+    ::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+        display: none !important
+    }
+
+    :root {
+        --background: 220 20% 10%;
+        --foreground: 210 20% 85%;
+        --card: 220 18% 12%;
+        --card-foreground: 210 20% 85%;
+        --popover: 220 18% 12%;
+        --popover-foreground: 210 20% 85%;
+        --primary: 175 70% 50%;
+        --primary-foreground: 220 20% 10%;
+        --secondary: 220 15% 18%;
+        --secondary-foreground: 210 20% 85%;
+        --muted: 220 15% 18%;
+        --muted-foreground: 215 15% 55%;
+        --accent: 45 90% 55%;
+        --accent-foreground: 220 20% 10%;
+        --destructive: 0 70% 50%;
+        --destructive-foreground: 210 20% 98%;
+        --border: 220 15% 20%;
+        --input: 220 15% 20%;
+        --ring: 175 70% 50%;
+        --radius: .25rem;
+        --tui-cyan: 175 70% 50%;
+        --tui-yellow: 45 90% 55%;
+        --tui-green: 140 60% 45%;
+        --tui-purple: 270 60% 60%;
+        --tui-blue: 210 80% 55%;
+        --tui-gray: 220 15% 35%
+    }
+
+    .dark {
+        --background: 220 20% 10%;
+        --foreground: 210 20% 85%;
+        --card: 220 18% 12%;
+        --card-foreground: 210 20% 85%;
+        --popover: 220 18% 12%;
+        --popover-foreground: 210 20% 85%;
+        --primary: 175 70% 50%;
+        --primary-foreground: 220 20% 10%;
+        --secondary: 220 15% 18%;
+        --secondary-foreground: 210 20% 85%;
+        --muted: 220 15% 18%;
+        --muted-foreground: 215 15% 55%;
+        --accent: 45 90% 55%;
+        --accent-foreground: 220 20% 10%;
+        --destructive: 0 70% 50%;
+        --destructive-foreground: 210 20% 98%;
+        --border: 220 15% 20%;
+        --input: 220 15% 20%;
+        --ring: 175 70% 50%
+    }
+
+    * {
+        border-color: hsl(var(--border))
+    }
+
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        font-feature-settings: "rlig" 1, "calt" 1;
+        font-family: JetBrains Mono, monospace
+    }
+}
+
+@layer utilities {
+    .visible {
+        visibility: visible
+    }
+
+    .sr-only {
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border-width: 0;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        position: absolute;
+        overflow: hidden
+    }
+
+    .absolute {
+        position: absolute
+    }
+
+    .relative {
+        position: relative
+    }
+
+    .mx-auto {
+        margin-inline: auto
+    }
+
+    .my-3 {
+        margin-block: calc(var(--spacing)*3)
+    }
+
+    .my-4 {
+        margin-block: calc(var(--spacing)*4)
+    }
+
+    .mt-0\.5 {
+        margin-top: calc(var(--spacing)*.5)
+    }
+
+    .mt-1 {
+        margin-top: calc(var(--spacing)*1)
+    }
+
+    .mt-4 {
+        margin-top: calc(var(--spacing)*4)
+    }
+
+    .mb-1 {
+        margin-bottom: calc(var(--spacing)*1)
+    }
+
+    .mb-1\.5 {
+        margin-bottom: calc(var(--spacing)*1.5)
+    }
+
+    .mb-2 {
+        margin-bottom: calc(var(--spacing)*2)
+    }
+
+    .mb-3 {
+        margin-bottom: calc(var(--spacing)*3)
+    }
+
+    .mb-4 {
+        margin-bottom: calc(var(--spacing)*4)
+    }
+
+    .mb-6 {
+        margin-bottom: calc(var(--spacing)*6)
+    }
+
+    .ml-2 {
+        margin-left: calc(var(--spacing)*2)
+    }
+
+    .ml-4 {
+        margin-left: calc(var(--spacing)*4)
+    }
+
+    .ml-auto {
+        margin-left: auto
+    }
+
+    .block {
+        display: block
+    }
+
+    .flex {
+        display: flex
+    }
+
+    .grid {
+        display: grid
+    }
+
+    .hidden {
+        display: none
+    }
+
+    .inline-block {
+        display: inline-block
+    }
+
+    .inline-flex {
+        display: inline-flex
+    }
+
+    .table {
+        display: table
+    }
+
+    .aspect-square {
+        aspect-ratio: 1
+    }
+
+    .size-3 {
+        width: calc(var(--spacing)*3);
+        height: calc(var(--spacing)*3)
+    }
+
+    .size-4 {
+        width: calc(var(--spacing)*4);
+        height: calc(var(--spacing)*4)
+    }
+
+    .size-5 {
+        width: calc(var(--spacing)*5);
+        height: calc(var(--spacing)*5)
+    }
+
+    .size-8 {
+        width: calc(var(--spacing)*8);
+        height: calc(var(--spacing)*8)
+    }
+
+    .h-1\.5 {
+        height: calc(var(--spacing)*1.5)
+    }
+
+    .h-2 {
+        height: calc(var(--spacing)*2)
+    }
+
+    .h-2\.5 {
+        height: calc(var(--spacing)*2.5)
+    }
+
+    .h-9 {
+        height: calc(var(--spacing)*9)
+    }
+
+    .h-10 {
+        height: calc(var(--spacing)*10)
+    }
+
+    .h-11 {
+        height: calc(var(--spacing)*11)
+    }
+
+    .h-full {
+        height: 100%
+    }
+
+    .max-h-64 {
+        max-height: calc(var(--spacing)*64)
+    }
+
+    .max-h-80 {
+        max-height: calc(var(--spacing)*80)
+    }
+
+    .min-h-screen {
+        min-height: 100vh
+    }
+
+    .w-2 {
+        width: calc(var(--spacing)*2)
+    }
+
+    .w-2\.5 {
+        width: calc(var(--spacing)*2.5)
+    }
+
+    .w-10 {
+        width: calc(var(--spacing)*10)
+    }
+
+    .w-64 {
+        width: calc(var(--spacing)*64)
+    }
+
+    .w-full {
+        width: 100%
+    }
+
+    .max-w-4xl {
+        max-width: var(--container-4xl)
+    }
+
+    .max-w-md {
+        max-width: var(--container-md)
+    }
+
+    .max-w-none {
+        max-width: none
+    }
+
+    .min-w-0 {
+        min-width: calc(var(--spacing)*0)
+    }
+
+    .flex-1 {
+        flex: 1
+    }
+
+    .shrink-0 {
+        flex-shrink: 0
+    }
+
+    .border-collapse {
+        border-collapse: collapse
+    }
+
+    .scale-0 {
+        --tw-scale-x: 0%;
+        --tw-scale-y: 0%;
+        --tw-scale-z: 0%;
+        scale: var(--tw-scale-x)var(--tw-scale-y)
+    }
+
+    .scale-100 {
+        --tw-scale-x: 100%;
+        --tw-scale-y: 100%;
+        --tw-scale-z: 100%;
+        scale: var(--tw-scale-x)var(--tw-scale-y)
+    }
+
+    .rotate-0 {
+        rotate: none
+    }
+
+    .rotate-90 {
+        rotate: 90deg
+    }
+
+    .animate-pulse {
+        animation: var(--animate-pulse)
+    }
+
+    .animate-spin {
+        animation: var(--animate-spin)
+    }
+
+    .touch-none {
+        touch-action: none
+    }
+
+    .list-outside {
+        list-style-position: outside
+    }
+
+    .list-decimal {
+        list-style-type: decimal
+    }
+
+    .list-disc {
+        list-style-type: disc
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .flex-col {
+        flex-direction: column
+    }
+
+    .items-center {
+        align-items: center
+    }
+
+    .items-start {
+        align-items: flex-start
+    }
+
+    .justify-between {
+        justify-content: space-between
+    }
+
+    .justify-center {
+        justify-content: center
+    }
+
+    .gap-1 {
+        gap: calc(var(--spacing)*1)
+    }
+
+    .gap-2 {
+        gap: calc(var(--spacing)*2)
+    }
+
+    .gap-3 {
+        gap: calc(var(--spacing)*3)
+    }
+
+    .gap-4 {
+        gap: calc(var(--spacing)*4)
+    }
+
+    .gap-6 {
+        gap: calc(var(--spacing)*6)
+    }
+
+    :where(.space-y-1>:not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing)*1)*var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-y-reverse)))
+    }
+
+    :where(.space-y-1\.5>:not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing)*1.5)*var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing)*1.5)*calc(1 - var(--tw-space-y-reverse)))
+    }
+
+    :where(.space-y-2>:not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))
+    }
+
+    :where(.space-y-3>:not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing)*3)*var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-y-reverse)))
+    }
+
+    :where(.divide-y>:not(:last-child)) {
+        --tw-divide-y-reverse: 0;
+        border-bottom-style: var(--tw-border-style);
+        border-top-style: var(--tw-border-style);
+        border-top-width: calc(1px*var(--tw-divide-y-reverse));
+        border-bottom-width: calc(1px*calc(1 - var(--tw-divide-y-reverse)))
+    }
+
+    :where(.divide-border>:not(:last-child)) {
+        border-color: hsl(var(--border))
+    }
+
+    .self-start {
+        align-self: flex-start
+    }
+
+    .truncate {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden
+    }
+
+    .overflow-hidden {
+        overflow: hidden
+    }
+
+    .overflow-x-auto {
+        overflow-x: auto
+    }
+
+    .overflow-y-auto {
+        overflow-y: auto
+    }
+
+    .rounded {
+        border-radius: .25rem
+    }
+
+    .rounded-\[inherit\] {
+        border-radius: inherit
+    }
+
+    .rounded-full {
+        border-radius: 3.40282e38px
+    }
+
+    .rounded-lg {
+        border-radius: calc(var(--radius) + 2px)
+    }
+
+    .rounded-md {
+        border-radius: var(--radius)
+    }
+
+    .border {
+        border-style: var(--tw-border-style);
+        border-width: 1px
+    }
+
+    .border-t {
+        border-top-style: var(--tw-border-style);
+        border-top-width: 1px
+    }
+
+    .border-b {
+        border-bottom-style: var(--tw-border-style);
+        border-bottom-width: 1px
+    }
+
+    .border-l {
+        border-left-style: var(--tw-border-style);
+        border-left-width: 1px
+    }
+
+    .border-l-2 {
+        border-left-style: var(--tw-border-style);
+        border-left-width: 2px
+    }
+
+    .border-0 {
+        border-width: 0
+    }
+
+    .border-border {
+        border-color: hsl(var(--border))
+    }
+
+    .border-input {
+        border-color: hsl(var(--input))
+    }
+
+    .border-tui-gray {
+        border-color: hsl(var(--tui-gray))
+    }
+
+    .border-tui-purple {
+        border-color: hsl(var(--tui-purple))
+    }
+
+    .border-tui-purple\/30 {
+        border-color: hsl(var(--tui-purple))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .border-tui-purple\/30 {
+            border-color: color-mix(in oklab, hsl(var(--tui-purple))30%, transparent)
+        }
+    }
+
+    .border-t-transparent {
+        border-top-color: #0000
+    }
+
+    .border-l-transparent {
+        border-left-color: #0000
+    }
+
+    .bg-background {
+        background-color: hsl(var(--background))
+    }
+
+    .bg-border {
+        background-color: hsl(var(--border))
+    }
+
+    .bg-card {
+        background-color: hsl(var(--card))
+    }
+
+    .bg-destructive {
+        background-color: hsl(var(--destructive))
+    }
+
+    .bg-muted {
+        background-color: hsl(var(--muted))
+    }
+
+    .bg-primary {
+        background-color: hsl(var(--primary))
+    }
+
+    .bg-secondary,
+    .bg-secondary\/30 {
+        background-color: hsl(var(--secondary))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .bg-secondary\/30 {
+            background-color: color-mix(in oklab, hsl(var(--secondary))30%, transparent)
+        }
+    }
+
+    .bg-secondary\/50 {
+        background-color: hsl(var(--secondary))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .bg-secondary\/50 {
+            background-color: color-mix(in oklab, hsl(var(--secondary))50%, transparent)
+        }
+    }
+
+    .bg-tui-cyan,
+    .bg-tui-cyan\/20 {
+        background-color: hsl(var(--tui-cyan))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .bg-tui-cyan\/20 {
+            background-color: color-mix(in oklab, hsl(var(--tui-cyan))20%, transparent)
+        }
+    }
+
+    .bg-tui-green {
+        background-color: hsl(var(--tui-green))
+    }
+
+    .bg-tui-purple\/5 {
+        background-color: hsl(var(--tui-purple))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .bg-tui-purple\/5 {
+            background-color: color-mix(in oklab, hsl(var(--tui-purple))5%, transparent)
+        }
+    }
+
+    .bg-tui-yellow {
+        background-color: hsl(var(--tui-yellow))
+    }
+
+    .bg-tui-yellow\/20 {
+        background-color: hsl(var(--tui-yellow))
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+        .bg-tui-yellow\/20 {
+            background-color: color-mix(in oklab, hsl(var(--tui-yellow))20%, transparent)
+        }
+    }
+
+    .p-2 {
+        padding: calc(var(--spacing)*2)
+    }
+
+    .p-3 {
+        padding: calc(var(--spacing)*3)
+    }
+
+    .p-4 {
+        padding: calc(var(--spacing)*4)
+    }
+
+    .p-6 {
+        padding: calc(var(--spacing)*6)
+    }
+
+    .p-\[1px\] {
+        padding: 1px
+    }
+
+    .px-1 {
+        padding-inline: calc(var(--spacing)*1)
+    }
+
+    .px-2 {
+        padding-inline: calc(var(--spacing)*2)
+    }
+
+    .px-3 {
+        padding-inline: calc(var(--spacing)*3)
+    }
+
+    .px-4 {
+        padding-inline: calc(var(--spacing)*4)
+    }
+
+    .px-8 {
+        padding-inline: calc(var(--spacing)*8)
+    }
+
+    .py-0\.5 {
+        padding-block: calc(var(--spacing)*.5)
+    }
+
+    .py-1 {
+        padding-block: calc(var(--spacing)*1)
+    }
+
+    .py-1\.5 {
+        padding-block: calc(var(--spacing)*1.5)
+    }
+
+    .py-2 {
+        padding-block: calc(var(--spacing)*2)
+    }
+
+    .py-3 {
+        padding-block: calc(var(--spacing)*3)
+    }
+
+    .py-4 {
+        padding-block: calc(var(--spacing)*4)
+    }
+
+    .py-6 {
+        padding-block: calc(var(--spacing)*6)
+    }
+
+    .py-12 {
+        padding-block: calc(var(--spacing)*12)
+    }
+
+    .pt-2 {
+        padding-top: calc(var(--spacing)*2)
+    }
+
+    .pt-4 {
+        padding-top: calc(var(--spacing)*4)
+    }
+
+    .pb-1 {
+        padding-bottom: calc(var(--spacing)*1)
+    }
+
+    .pb-3 {
+        padding-bottom: calc(var(--spacing)*3)
+    }
+
+    .pl-3 {
+        padding-left: calc(var(--spacing)*3)
+    }
+
+    .pl-5 {
+        padding-left: calc(var(--spacing)*5)
+    }
+
+    .m-0 {
+        margin: 0
+    }
+
+    .text-left {
+        text-align: left
+    }
+
+    .text-center {
+        text-align: center
+    }
+
+    .text-2xl {
+        font-size: var(--text-2xl);
+        line-height: var(--tw-leading, var(--text-2xl--line-height))
+    }
+
+    .text-base {
+        font-size: var(--text-base);
+        line-height: var(--tw-leading, var(--text-base--line-height))
+    }
+
+    .text-lg {
+        font-size: var(--text-lg);
+        line-height: var(--tw-leading, var(--text-lg--line-height))
+    }
+
+    .text-sm {
+        font-size: var(--text-sm);
+        line-height: var(--tw-leading, var(--text-sm--line-height))
+    }
+
+    .text-xl {
+        font-size: var(--text-xl);
+        line-height: var(--tw-leading, var(--text-xl--line-height))
+    }
+
+    .text-xs {
+        font-size: var(--text-xs);
+        line-height: var(--tw-leading, var(--text-xs--line-height))
+    }
+
+    .text-\[10px\] {
+        font-size: 10px
+    }
+
+    .leading-none {
+        --tw-leading: 1;
+        line-height: 1
+    }
+
+    .leading-relaxed {
+        line-height: 1.625
+    }
+
+    .font-medium {
+        --tw-font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-medium)
+    }
+
+    .font-semibold {
+        --tw-font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-semibold)
+    }
+
+    .font-bold {
+        font-weight: 700
+    }
+
+    .font-mono {
+        font-family: JetBrains Mono, monospace
+    }
+
+    .tracking-tight {
+        --tw-tracking: var(--tracking-tight);
+        letter-spacing: var(--tracking-tight)
+    }
+
+    .tracking-wide {
+        letter-spacing: 0.025em
+    }
+
+    .whitespace-nowrap {
+        white-space: nowrap
+    }
+
+    .whitespace-pre-wrap {
+        white-space: pre-wrap
+    }
+
+    .antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+
+    .text-card-foreground {
+        color: hsl(var(--card-foreground))
+    }
+
+    .text-destructive {
+        color: hsl(var(--destructive))
+    }
+
+    .text-destructive-foreground {
+        color: hsl(var(--destructive-foreground))
+    }
+
+    .text-foreground {
+        color: hsl(var(--foreground))
+    }
+
+    .text-background {
+        color: hsl(var(--background))
+    }
+
+    .text-muted-foreground {
+        color: hsl(var(--muted-foreground))
+    }
+
+    .text-primary {
+        color: hsl(var(--primary))
+    }
+
+    .text-primary-foreground {
+        color: hsl(var(--primary-foreground))
+    }
+
+    .text-secondary-foreground {
+        color: hsl(var(--secondary-foreground))
+    }
+
+    .text-tui-blue {
+        color: hsl(var(--tui-blue))
+    }
+
+    .text-tui-cyan {
+        color: hsl(var(--tui-cyan))
+    }
+
+    .text-tui-green {
+        color: hsl(var(--tui-green))
+    }
+
+    .text-tui-purple {
+        color: hsl(var(--tui-purple))
+    }
+
+    .text-tui-yellow {
+        color: hsl(var(--tui-yellow))
+    }
+
+    .italic {
+        font-style: italic
+    }
+
+    .no-underline {
+        text-decoration-line: none
+    }
+
+    .underline {
+        text-decoration-line: underline
+    }
+
+    .underline-offset-4 {
+        text-underline-offset: 4px
+    }
+
+    .shadow-sm {
+        --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+    }
+
+    .ring-offset-background {
+        --tw-ring-offset-color: hsl(var(--background))
+    }
+
+    .outline {
+        outline-style: var(--tw-outline-style);
+        outline-width: 1px
+    }
+
+    .transition-all {
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration))
+    }
+
+    .transition-colors {
+        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration))
+    }
+
+    .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms
+    }
+
+    .duration-150 {
+        transition-duration: 150ms
+    }
+
+    .select-none {
+        -webkit-user-select: none;
+        user-select: none
+    }
+
+    .last\:border-0:last-child {
+        border-width: 0
+    }
+
+    .last\:mb-0:last-child {
+        margin-bottom: 0
+    }
+
+    .hover\:opacity-80:hover {
+        opacity: 0.8
+    }
+
+    .group-\[\.is-system\]\:text-muted-foreground:is(:where(.group).is-system *) {
+        color: hsl(var(--muted-foreground))
+    }
+
+    .group-\[\.is-system\]\:italic:is(:where(.group).is-system *) {
+        font-style: italic
+    }
+
+    .group-\[\.is-tool\]\:text-muted-foreground:is(:where(.group).is-tool *) {
+        color: hsl(var(--muted-foreground))
+    }
+
+    @media(hover:hover) {
+        .hover\:border-tui-cyan\/50:hover {
+            border-color: hsl(var(--tui-cyan))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:border-tui-cyan\/50:hover {
+                border-color: color-mix(in oklab, hsl(var(--tui-cyan))50%, transparent)
+            }
+        }
+
+        .hover\:bg-accent:hover {
+            background-color: hsl(var(--accent))
+        }
+
+        .hover\:bg-destructive\/90:hover {
+            background-color: hsl(var(--destructive))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-destructive\/90:hover {
+                background-color: color-mix(in oklab, hsl(var(--destructive))90%, transparent)
+            }
+        }
+
+        .hover\:bg-primary\/90:hover {
+            background-color: hsl(var(--primary))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-primary\/90:hover {
+                background-color: color-mix(in oklab, hsl(var(--primary))90%, transparent)
+            }
+        }
+
+        .hover\:bg-secondary\/30:hover {
+            background-color: hsl(var(--secondary))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-secondary\/30:hover {
+                background-color: color-mix(in oklab, hsl(var(--secondary))30%, transparent)
+            }
+        }
+
+        .hover\:bg-secondary\/50:hover {
+            background-color: hsl(var(--secondary))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-secondary\/50:hover {
+                background-color: color-mix(in oklab, hsl(var(--secondary))50%, transparent)
+            }
+        }
+
+        .hover\:bg-secondary\/80:hover {
+            background-color: hsl(var(--secondary))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-secondary\/80:hover {
+                background-color: color-mix(in oklab, hsl(var(--secondary))80%, transparent)
+            }
+        }
+
+        .hover\:bg-tui-purple\/10:hover {
+            background-color: hsl(var(--tui-purple))
+        }
+
+        @supports (color:color-mix(in lab, red, red)) {
+            .hover\:bg-tui-purple\/10:hover {
+                background-color: color-mix(in oklab, hsl(var(--tui-purple))10%, transparent)
+            }
+        }
+
+        .hover\:text-accent-foreground:hover {
+            color: hsl(var(--accent-foreground))
+        }
+
+        .hover\:text-foreground:hover {
+            color: hsl(var(--foreground))
+        }
+
+        .hover\:underline:hover {
+            text-decoration-line: underline
+        }
+    }
+
+    .focus-visible\:ring-2:focus-visible {
+        --tw-ring-shadow: var(--tw-ring-inset, )0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color, currentcolor);
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+    }
+
+    .focus-visible\:ring-ring:focus-visible {
+        --tw-ring-color: hsl(var(--ring))
+    }
+
+    .focus-visible\:ring-offset-2:focus-visible {
+        --tw-ring-offset-width: 2px;
+        --tw-ring-offset-shadow: var(--tw-ring-inset, )0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color)
+    }
+
+    .focus-visible\:outline-none:focus-visible {
+        --tw-outline-style: none;
+        outline-style: none
+    }
+
+    .disabled\:pointer-events-none:disabled {
+        pointer-events: none
+    }
+
+    .disabled\:opacity-50:disabled {
+        opacity: .5
+    }
+
+    @media(min-width:40rem) {
+        .sm\:ml-0 {
+            margin-left: calc(var(--spacing)*0)
+        }
+
+        .sm\:block {
+            display: block
+        }
+
+        .sm\:flex {
+            display: flex
+        }
+
+        .sm\:w-14 {
+            width: calc(var(--spacing)*14)
+        }
+
+        .sm\:flex-row {
+            flex-direction: row
+        }
+
+        .sm\:items-start {
+            align-items: flex-start
+        }
+
+        .sm\:justify-center {
+            justify-content: center
+        }
+
+        .sm\:gap-3 {
+            gap: calc(var(--spacing)*3)
+        }
+
+        .sm\:p-6 {
+            padding: calc(var(--spacing)*6)
+        }
+
+        .sm\:px-4 {
+            padding-inline: calc(var(--spacing)*4)
+        }
+    }
+
+    @media(min-width:48rem) {
+        .md\:inline {
+            display: inline
+        }
+    }
+
+    @media(min-width:64rem) {
+        .lg\:flex {
+            display: flex
+        }
+
+        .lg\:hidden {
+            display: none
+        }
+    }
+
+    @media(prefers-color-scheme:dark) {
+        .dark\:scale-0 {
+            --tw-scale-x: 0%;
+            --tw-scale-y: 0%;
+            --tw-scale-z: 0%;
+            scale: var(--tw-scale-x)var(--tw-scale-y)
+        }
+
+        .dark\:scale-100 {
+            --tw-scale-x: 100%;
+            --tw-scale-y: 100%;
+            --tw-scale-z: 100%;
+            scale: var(--tw-scale-x)var(--tw-scale-y)
+        }
+
+        .dark\:-rotate-90 {
+            rotate: -90deg
+        }
+
+        .dark\:rotate-0 {
+            rotate: none
+        }
+    }
+
+    .\[\&_svg\]\:pointer-events-none svg {
+        pointer-events: none
+    }
+
+    .\[\&_svg\]\:size-4 svg {
+        width: calc(var(--spacing)*4);
+        height: calc(var(--spacing)*4)
+    }
+
+    .\[\&_svg\]\:shrink-0 svg {
+        flex-shrink: 0
+    }
+
+    .\[\&\>\*\:first-child\]\:mt-0>:first-child {
+        margin-top: calc(var(--spacing)*0)
+    }
+
+    .\[\&\>\*\:last-child\]\:mb-0>:last-child {
+        margin-bottom: calc(var(--spacing)*0)
+    }
+}
+
+@property --tw-scale-x {
+    syntax: "*";
+    inherits: false;
+    initial-value: 1
+}
+
+@property --tw-scale-y {
+    syntax: "*";
+    inherits: false;
+    initial-value: 1
+}
+
+@property --tw-scale-z {
+    syntax: "*";
+    inherits: false;
+    initial-value: 1
+}
+
+@property --tw-space-y-reverse {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-divide-y-reverse {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-border-style {
+    syntax: "*";
+    inherits: false;
+    initial-value: solid
+}
+
+@property --tw-leading {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-font-weight {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-tracking {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-shadow-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-shadow-alpha {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --tw-inset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-inset-shadow-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-inset-shadow-alpha {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --tw-ring-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-inset-ring-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-inset-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-ring-inset {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-ring-offset-width {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-ring-offset-color {
+    syntax: "*";
+    inherits: false;
+    initial-value: #fff
+}
+
+@property --tw-ring-offset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-outline-style {
+    syntax: "*";
+    inherits: false;
+    initial-value: solid
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .5
+    }
+}
+    </style>
+</head>
+<body class="bg-background text-foreground font-mono leading-relaxed antialiased min-h-screen text-sm">
+    <div class="min-h-screen flex flex-col">
+        
+        <header class="border-b border-border px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-8 rounded bg-tui-cyan/20 flex items-center justify-center">
+                    <span class="text-tui-cyan font-bold text-sm">C</span>
+                </div>
+                <h1 class="text-base font-semibold">Comprehensive Analysis of Lease and Valuation Reports</h1>
+            </div>
+            <div class="text-xs text-muted-foreground">April 25, 2026 at 3:26 PM</div>
+        </header>
+
+        <div class="flex-1 flex overflow-hidden">
+            
+            <main class="flex-1 overflow-y-auto">
+                <div class="max-w-4xl mx-auto px-2 sm:px-4 py-4">
+
+
+<div class="group is-user flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-yellow/20 text-tui-yellow">you</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        <div class="whitespace-pre-wrap">I&#39;d like you to scan the file LEASEAGREEMENT.txt, PROPERTYVALUATIONREPORT1.txt, and PROPERTYVALUATIONREPORT2.txt and provide a detailed report on them, listing the valuation of each document as well as any potential conflicts or red flags and assign an overall confidence score. Ouptut your findings in json form. Identify cross document inconsitencies if they occur, and ensure you explain the legal and financial ramifications of everything in your output. Also ensure you check for both legal and shariah compliance in all documents. Ensure when conflicts occur you explicitly explain in which document and what the ramifications are. </div>
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">root</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">transfer_task</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;agent&#34;: &#34;document_agent&#34;,
+  &#34;expected_output&#34;: &#34;Detailed analysis of the documents, listing valuation, potential conflicts, and red flags, with explanations of legal and financial ramifications.&#34;,
+  &#34;task&#34;: &#34;Analyze LEASEAGREEMENT.txt, PROPERTYVALUATIONREPORT1.txt, and PROPERTYVALUATIONREPORT2.txt for key information, potential conflicts, and red flags. Identify cross-document inconsistencies and explain legal and financial ramifications.&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">### Detailed Analysis of the Documents
+
+#### 1. Lease Agreement Analysis
+- **Parties Involved:**
+  - Lender: Al Noor Capital Lending LLC
+  - Borrower: Riyadh Asset Tokenization SPV Ltd.
+
+- **Key Financial Terms:**
+  - Loan Amount: SAR 60,000,000
+  - Interest Rate: 6-month SAIBOR &#43; 4.00%
+  - Default Rate: Interest Rate &#43; 3.00%
+  - Repayment: 5 years with interest-only payments for the first 24 months
+
+- **Security:**
+  - First-ranking mortgage over the property
+  - Assignment of rental income
+  - Pledge over SPV shares
+
+- **Potential Conflicts and Red Flags:**
+  - The agreement mentions no undisclosed encumbrances, yet there is a seniority conflict with token holders regarding cash flow priority.
+  - The borrower must maintain a minimum occupancy of 75%, which could be challenging given the current market conditions.
+  - A decrease in property value by more than 20% is considered an event of default, which could be problematic given the fluctuating real estate market.
+
+#### 2. Property Valuation Report 1 Analysis
+- **Valuation:**
+  - Estimated Market Value: SAR 120,000,000
+  - Methodology: Income Capitalization Approach
+  - Key Assumptions: 
+    - Average Rental Yield: 6.5%
+    - Vacancy Rate: 18%
+    - Rental Growth Rate: 2% annually
+
+- **Risk Factors:**
+  - Elevated vacancy in the office segment
+  - Limited demand growth in the current market cycle
+  - Exposure to tenant turnover
+
+#### 3. Property Valuation Report 2 Analysis
+- **Valuation:**
+  - Estimated Market Value: SAR 150,000,000
+  - Methodology: Income Capitalization Approach and DCF Model
+  - Key Assumptions:
+    - Average Rental Yield: 7.8%
+    - Vacancy Rate: 10%
+    - Rental Growth Rate: 5% annually
+
+- **Risk Factors:**
+  - Dependence on continued economic expansion
+  - Sensitivity to interest rate fluctuations
+  - Potential oversupply in commercial real estate
+
+### Cross-Document Inconsistencies
+- **Valuation Discrepancy:**
+  - Report 1 values the property at SAR 120,000,000, while Report 2 values it at SAR 150,000,000. This 25% difference could impact lending decisions and investor confidence.
+  
+- **Assumptions Variability:**
+  - Report 1 uses conservative assumptions, while Report 2 uses aggressive assumptions. This inconsistency could lead to different strategic decisions regarding asset management and investment.
+
+### Legal and Financial Ramifications
+- **Legal:**
+  - The seniority conflict in cash flow distribution could lead to legal disputes between the lender and token holders.
+  - The requirement for maintaining a minimum occupancy rate and the potential for default due to property value depreciation could lead to legal challenges.
+
+- **Financial:**
+  - The discrepancy in property valuation could affect the perceived asset value, influencing borrowing capacity and investor interest.
+  - The aggressive assumptions in Report 2 may not materialize, leading to financial shortfalls and potential default on loan terms.
+
+### Actionable Insights
+- **Verification:**
+  - Verify the ownership and encumbrances of the property to ensure compliance with the loan agreement.
+- **Reconciliation:**
+  - Reconcile the differences between the two valuation reports to present a unified and realistic asset value.
+- **Risk Mitigation:**
+  - Develop strategies to mitigate the risk of high vacancy rates and ensure stable rental income.
+- **Legal Consultation:**
+  - Seek legal advice to address potential conflicts in cash flow distribution and ensure compliance with all contractual obligations.</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">transfer_task</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;agent&#34;: &#34;valuation_agent&#34;,
+  &#34;expected_output&#34;: &#34;Valuation details and any inconsistencies between the two property valuation reports.&#34;,
+  &#34;task&#34;: &#34;Extract and verify the valuation details from PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt, and identify any inconsistencies between them.&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">Here are the extracted valuation details from both PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt, along with identified inconsistencies:
+
+### PROPERTYVALUATIONREPORT1.txt:
+- **Client:** Riyadh Asset Tokenization SPV
+- **Property Type:** Mixed-Use (Commercial &#43; Residential)
+- **Location:** Riyadh, Saudi Arabia
+- **Valuation Methodology:** Income Capitalization Approach, supported by market comparison review.
+- **Estimated Market Value:** SAR 120,000,000
+- **Key Assumptions (Conservative):**
+  - Average Rental Yield: 6.5%
+  - Vacancy Rate: 18%
+  - Rental Growth Rate: 2% annually
+  - Capitalization Rate: 8.0%
+  - Operating Expense Ratio: 28%
+- **Financial Overview:**
+  - Gross Potential Income: SAR 10,800,000
+  - Effective Gross Income: SAR 8,856,000
+  - Net Operating Income (NOI): SAR 6,376,320
+- **Valuation Calculation:**
+  - Value = NOI / Cap Rate = 6,376,320 / 0.08 ≈ SAR 79,704,000
+  - Final Adjusted Value: SAR 120,000,000
+- **Risk Factors:**
+  - Elevated vacancy in office segment
+  - Limited demand growth in the current market cycle
+  - Exposure to tenant turnover
+  - Financing constraints affecting buyers
+
+### PROPERTYVALUATIONREPORT2.txt:
+- **Client:** Riyadh Asset Tokenization SPV
+- **Property Type:** Mixed-Use (Commercial &#43; Residential)
+- **Location:** Riyadh, Saudi Arabia
+- **Valuation Methodology:** Income Capitalization Approach, Discounted Cash Flow (DCF) model (5-year projection).
+- **Estimated Market Value:** SAR 150,000,000
+- **Key Assumptions (Aggressive):**
+  - Average Rental Yield: 7.8%
+  - Vacancy Rate: 10%
+  - Rental Growth Rate: 5% annually
+  - Capitalization Rate: 6.5%
+  - Operating Expense Ratio: 22%
+- **Financial Overview:**
+  - Gross Potential Income: SAR 12,500,000
+  - Effective Gross Income: SAR 11,250,000
+  - Net Operating Income (NOI): SAR 8,775,000
+- **Valuation Calculation:**
+  - A. Direct Capitalization: Value = NOI / Cap Rate = 8,775,000 / 0.065 ≈ SAR 135,000,000
+  - B. DCF Valuation (5-Year Projection): DCF Implied Value: SAR 150,000,000
+- **Value Drivers:**
+  - Strong urban growth in Riyadh
+  - Increasing demand for mixed-use developments
+  - Government-backed economic initiatives
+  - Improved occupancy stabilization
+- **Risk Factors:**
+  - Dependence on continued economic expansion
+  - Sensitivity to interest rate fluctuations
+  - Potential oversupply in commercial real estate
+
+### Inconsistencies:
+1. **Market Value Estimation:**
+   - Report 1 estimates the market value at SAR 120,000,000.
+   - Report 2 estimates the market value at SAR 150,000,000.
+
+2. **Valuation Methodology:**
+   - Report 1 primarily uses the Income Capitalization Approach.
+   - Report 2 uses both the Income Capitalization Approach and a DCF model.
+
+3. **Key Assumptions:**
+   - Report 1 has more conservative assumptions with a higher capitalization rate and vacancy rate.
+   - Report 2 adopts aggressive assumptions with a lower capitalization rate and vacancy rate.
+
+4. **Financial Overview:**
+   - Report 2 projects higher Gross Potential and Net Operating Income.
+
+5. **Risk Factors and Value Drivers:**
+   - Report 1 focuses on risks related to vacancy and tenant turnover.
+   - Report 2 highlights growth potential and economic initiatives as value drivers.
+
+These differences reflect varying perspectives on market conditions and property performance, leading to significant discrepancies in estimated market values.</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">transfer_task</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;agent&#34;: &#34;shariah_agent&#34;,
+  &#34;expected_output&#34;: &#34;Shariah compliance status of each document and any issues found.&#34;,
+  &#34;task&#34;: &#34;Ensure Islamic finance compliance in LEASEAGREEMENT.txt, PROPERTYVALUATIONREPORT1.txt, and PROPERTYVALUATIONREPORT2.txt.&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">Let&#39;s review the Shariah compliance of each document:
+
+### LEASEAGREEMENT.txt
+
+**Issues Identified:**
+1. **Riba (Interest):** 
+   - The agreement includes an &#34;Interest Rate&#34; of 6-month SAIBOR &#43; 4.00% per annum and a &#34;Default Rate&#34; that adds 3.00% to the Interest Rate. This constitutes Riba, which is prohibited in Islamic finance.
+
+2. **Gharar (Uncertainty):**
+   - The agreement is quite detailed, with clear terms and conditions, so it does not seem to have issues with excessive uncertainty.
+
+3. **Haram Assets:**
+   - The agreement involves real estate, which is generally permissible. However, the connection to a conventional lending structure involving interest makes it non-compliant.
+
+**Conclusion:** The agreement is not Shariah-compliant due to the inclusion of interest. An alternative structure such as a Musharakah (joint venture) or Ijarah (leasing) should be considered.
+
+### PROPERTYVALUATIONREPORT1.txt
+
+**Issues Identified:**
+1. **Asset Verification:**
+   - The property is a mixed-use development in Riyadh, which is permissible as long as it does not involve any haram activities or industries.
+
+2. **Financial Structure:**
+   - The report is a valuation and does not involve a financial structure that would include interest or risk-sharing, so it does not directly violate Shariah principles.
+
+3. **Contract Terms:**
+   - The valuation report is clear and does not contain ambiguity.
+
+**Conclusion:** The valuation report itself does not violate Shariah principles, as it is purely informational and does not involve interest or haram activities.
+
+### PROPERTYVALUATIONREPORT2.txt
+
+**Issues Identified:**
+1. **Asset Verification:**
+   - Similar to the first report, the property is permissible under Shariah law.
+
+2. **Financial Structure:**
+   - This report also does not involve financial transactions, so it does not directly conflict with Shariah principles.
+
+3. **Contract Terms:**
+   - The report is clear and straightforward, with no excessive uncertainty.
+
+**Conclusion:** This valuation report is compliant with Shariah principles, as it is informational and does not involve interest or haram activities.
+
+### Overall Recommendations:
+
+- **LEASEAGREEMENT.txt**: Needs restructuring to remove interest-based elements. Consider using a Shariah-compliant contract like Musharakah or Ijarah.
+- **PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt**: Both reports are compliant and can be used as part of a Shariah-compliant structure, provided the overall transaction structure adheres to Islamic finance principles.</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">transfer_task</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;agent&#34;: &#34;compliance_agent&#34;,
+  &#34;expected_output&#34;: &#34;Legal compliance status of each document and any issues found.&#34;,
+  &#34;task&#34;: &#34;Check LEASEAGREEMENT.txt, PROPERTYVALUATIONREPORT1.txt, and PROPERTYVALUATIONREPORT2.txt for legal compliance with SAMA, CMA, and FATF regulations.&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">### Legal Compliance Status:
+
+#### LEASEAGREEMENT.txt
+
+1. **SAMA Compliance:**
+   - **License Requirement:** The agreement involves a financial facility, which may require a SAMA license for the lender.
+   - **AML/KYC Procedures:** Not explicitly mentioned in the agreement.
+   - **Sanctions Screening:** Not addressed.
+   - **Transaction Monitoring:** Not addressed.
+
+2. **CMA Compliance:**
+   - **Security Qualification:** The agreement involves financial transactions that may qualify as securities.
+   - **Registration and Licensing:** Not mentioned, but may be required.
+   - **Investor Accreditation:** Not addressed.
+   - **Disclosure Requirements:** Basic terms are disclosed, but further details may be needed.
+   - **Marketing Materials:** Not applicable.
+
+3. **FATF Compliance:**
+   - **KYC/AML Procedures:** Not explicitly mentioned.
+   - **Beneficial Ownership:** The agreement mentions the SPV but does not detail beneficial ownership transparency.
+
+4. **PDPL Compliance:**
+   - **Data Protection:** Not addressed.
+   - **Consent Mechanisms:** Not mentioned.
+   - **Data Retention Policies:** Not mentioned.
+
+**Issues Found:**
+- Potential conflict with token holders regarding cash flow priority.
+- Lack of explicit mention of AML/KYC procedures.
+
+#### PROPERTYVALUATIONREPORT1.txt
+
+1. **SAMA Compliance:**
+   - **License Requirement:** Not applicable.
+   - **AML/KYC Procedures:** Not applicable.
+   - **Sanctions Screening:** Not applicable.
+   - **Transaction Monitoring:** Not applicable.
+
+2. **CMA Compliance:**
+   - **Security Qualification:** The report supports asset valuation, which may be used in securities offerings.
+   - **Registration and Licensing:** Not directly applicable.
+   - **Investor Accreditation:** Not addressed.
+   - **Disclosure Requirements:** Comprehensive valuation details provided.
+   - **Marketing Materials:** Not applicable.
+
+3. **FATF Compliance:**
+   - **KYC/AML Procedures:** Not applicable.
+   - **Beneficial Ownership:** Not applicable.
+
+4. **PDPL Compliance:**
+   - **Data Protection:** Not addressed.
+   - **Consent Mechanisms:** Not mentioned.
+   - **Data Retention Policies:** Not mentioned.
+
+**Issues Found:**
+- None significant for regulatory compliance, assuming the valuation is used internally.
+
+#### PROPERTYVALUATIONREPORT2.txt
+
+1. **SAMA Compliance:**
+   - **License Requirement:** Not applicable.
+   - **AML/KYC Procedures:** Not applicable.
+   - **Sanctions Screening:** Not applicable.
+   - **Transaction Monitoring:** Not applicable.
+
+2. **CMA Compliance:**
+   - **Security Qualification:** The report supports asset valuation, which may be used in securities offerings.
+   - **Registration and Licensing:** Not directly applicable.
+   - **Investor Accreditation:** Not addressed.
+   - **Disclosure Requirements:** Comprehensive valuation details provided.
+   - **Marketing Materials:** Not applicable.
+
+3. **FATF Compliance:**
+   - **KYC/AML Procedures:** Not applicable.
+   - **Beneficial Ownership:** Not applicable.
+
+4. **PDPL Compliance:**
+   - **Data Protection:** Not addressed.
+   - **Consent Mechanisms:** Not mentioned.
+   - **Data Retention Policies:** Not mentioned.
+
+**Issues Found:**
+- None significant for regulatory compliance, assuming the valuation is used internally.
+
+### Recommendations:
+- **For LEASEAGREEMENT.txt:**
+  - Clarify AML/KYC procedures and ensure compliance with SAMA and FATF standards.
+  - Address the potential conflict with token holders regarding cash flow priority.
+  - Ensure any necessary licenses or registrations with SAMA and CMA are obtained.
+
+- **For PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt:**
+  - Ensure the valuations are used in compliance with CMA regulations if used for securities offerings.
+  - Consider data protection and privacy measures if personal data is involved in the valuation process.
+
+### Overall Status:
+- **LEASEAGREEMENT.txt:** Needs review for compliance with SAMA and FATF.
+- **PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt:** Compliant for internal use, but review needed if used for public offerings.</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">document_agent</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">list_directory</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;./&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">DIR  CONVERSATIONS
+FILE Comprehensive-Analysis-of-Property-Documents-2026-04-25-152250.html
+FILE LEASEAGREEMENT.txt
+FILE PROPERTYVALUATIONREPORT1.txt
+FILE PROPERTYVALUATIONREPORT2.txt
+FILE airbnb-old.yaml
+FILE airbnb.yaml
+FILE backendspec-old.yaml
+FILE backendspec.yaml
+FILE blog-old.yaml
+FILE blog.yaml
+DIR  cagent-yaml-collection
+FILE cagent1.yaml
+FILE cagent2.yaml
+DIR  codebase
+FILE dev-team-old.yaml
+FILE dev-team.yaml
+FILE docker-agent-old.yaml
+FILE docker-agent-windows-amd64.exe
+FILE docker-agent.yaml
+FILE finance-old.yaml
+FILE finance.yaml
+FILE legal-agent-smaller.yaml
+FILE legal-agent.yaml
+DIR  mcp-server-airbnb
+FILE mcp_generator-old.yaml
+FILE mcp_generator.yaml
+FILE nightly-scanner-old.yaml
+FILE nightly-scanner.yaml
+DIR  node_modules
+FILE run_instructions.txt
+FILE scanner-memory.db
+FILE scanner-memory.db-shm
+FILE scanner-memory.db-wal
+FILE weatherdev-old.yaml
+FILE weatherdev.yaml
+</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_file</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;LEASEAGREEMENT.txt&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">THIS FACILITY AGREEMENT is made on [Insert Date]
+
+BETWEEN:
+
+Al Noor Capital Lending LLC, a company incorporated under the laws of the Kingdom of Saudi Arabia
+(the “Lender”)
+
+AND
+
+Riyadh Asset Tokenization SPV Ltd., a special purpose vehicle established for asset holding and tokenization
+(the “Borrower”)
+1. DEFINITIONS AND INTERPRETATION
+
+“Facility” means the term loan facility made available under this Agreement.
+
+“Interest Rate” means 6-month SAIBOR &#43; 4.00% per annum.
+
+“Default Rate” means the Interest Rate plus 3.00% per annum.
+
+“Security” means all collateral granted under Clause 8.
+
+2. FACILITY
+
+2.1 The Lender agrees to make available to the Borrower a term loan facility in the amount of:
+
+SAR 60,000,000 (Sixty Million Saudi Riyals)
+
+2.2 Purpose:
+The Facility shall be used for:
+
+Acquisition and development of a mixed-use real estate property in Riyadh
+General corporate purposes
+3. AVAILABILITY
+
+3.1 The Facility shall be available for drawdown within 60 days of execution.
+
+3.2 Conditions precedent include:
+
+Execution of security documents
+Evidence of property ownership
+No material adverse change
+4. INTEREST
+
+4.1 The Borrower shall pay interest on the outstanding principal amount at the Interest Rate.
+
+4.2 Interest shall:
+
+Accrue daily
+Be payable semi-annually in arrears
+
+4.3 If the Borrower fails to pay any amount when due, Default Interest shall apply.
+
+5. REPAYMENT
+
+5.1 The Facility shall be repaid over a period of 5 years.
+
+5.2 Repayment structure:
+
+Interest-only payments for first 24 months
+Principal amortization thereafter
+
+5.3 Final balloon payment due at maturity.
+
+6. PREPAYMENT
+
+6.1 The Borrower may prepay the Facility subject to:
+
+2% prepayment fee (first 2 years)
+7. REPRESENTATIONS AND WARRANTIES
+
+The Borrower represents that:
+
+It has valid title to the property
+No undisclosed encumbrances exist (⚠️ intentionally contradicted elsewhere in test set)
+It is compliant with applicable laws
+8. SECURITY
+
+8.1 The Facility shall be secured by:
+
+First-ranking mortgage over the property
+Assignment of rental income
+Pledge over SPV shares
+
+8.2 The Borrower agrees that:
+
+The Lender shall have priority rights over all cash flows, including rental income, before any distributions to equity holders or token investors.
+
+(⚠️ This creates a seniority conflict with token holders)
+
+9. COVENANTS
+
+The Borrower undertakes:
+
+To maintain minimum occupancy of 75%
+Not to incur additional debt without Lender consent
+To ensure rental proceeds are deposited into a controlled account
+10. EVENTS OF DEFAULT
+
+Events include:
+
+Non-payment
+Breach of covenants
+انخفاض property value by more than 20%
+Insolvency
+11. CONSEQUENCES OF DEFAULT
+
+Upon default:
+
+All outstanding amounts become immediately due
+Default Interest applies
+Lender may enforce security
+12. GOVERNING LAW
+
+This Agreement shall be governed by the laws of the Kingdom of Saudi Arabia.
+
+13. MISCELLANEOUS
+This Agreement constitutes the entire agreement
+Amendments must be in writing
+Assignment by Lender permitted without consent</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_file</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT1.txt&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">PROPERTY VALUATION REPORT
+
+Client: Riyadh Asset Tokenization SPV
+Property Type: Mixed-Use (Commercial &#43; Residential)
+Location: Riyadh, Saudi Arabia
+Valuation Date: [Insert Date]
+Prepared By: Independent Valuation Consultant
+
+1. Executive Summary
+
+This report provides an independent valuation of a mixed-use property located in Riyadh. Based on conservative assumptions regarding occupancy, rental growth, and capitalization rates, the estimated market value is:
+
+SAR 120,000,000
+
+2. Property Description
+Asset Type: Mixed-use development
+Components:
+Ground-floor retail units
+Office spaces (floors 1–3)
+Residential apartments (floors 4–10)
+Total Built-Up Area: ~18,500 sqm
+Occupancy Rate: 82%
+3. Valuation Methodology
+
+The valuation primarily uses the Income Capitalization Approach, supported by a market comparison review.
+
+4. Key Assumptions (Conservative)
+Average Rental Yield: 6.5%
+Vacancy Rate: 18%
+Rental Growth Rate: 2% annually
+Capitalization Rate: 8.0%
+Operating Expense Ratio: 28%
+5. Financial Overview
+Gross Potential Income: SAR 10,800,000
+Effective Gross Income (after vacancy): SAR 8,856,000
+Net Operating Income (NOI): SAR 6,376,320
+6. Valuation Calculation
+
+Using direct capitalization:
+
+Value = NOI / Cap Rate
+= 6,376,320 / 0.08 ≈ SAR 79,704,000
+
+After applying market normalization adjustments and premium for location:
+
+Final Adjusted Value: SAR 120,000,000
+
+7. Risk Factors
+Elevated vacancy in office segment
+محدود demand growth in current market cycle
+Exposure to tenant turnover
+Financing constraints affecting buyers
+8. Conclusion
+
+This valuation reflects a risk-adjusted, conservative market position, suitable for regulatory and compliance-sensitive structuring.</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_file</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">PROPERTY VALUATION REPORT
+
+Client: Riyadh Asset Tokenization SPV
+Property Type: Mixed-Use (Commercial &#43; Residential)
+Location: Riyadh, Saudi Arabia
+Valuation Date: [Insert Date]
+Prepared By: Independent Valuation Consultant
+
+1. Executive Summary
+
+This report presents a valuation based on forward-looking growth assumptions and strong demand projections in Riyadh’s mixed-use sector.
+
+Estimated Market Value: SAR 150,000,000
+
+2. Property Description
+
+(Same as Report A — intentionally consistent)
+
+3. Valuation Methodology
+Income Capitalization Approach
+Discounted Cash Flow (DCF) model (5-year projection)
+4. Key Assumptions (Aggressive)
+Average Rental Yield: 7.8%
+Vacancy Rate: 10%
+Rental Growth Rate: 5% annually
+Capitalization Rate: 6.5%
+Operating Expense Ratio: 22%
+5. Financial Overview
+Gross Potential Income: SAR 12,500,000
+Effective Gross Income: SAR 11,250,000
+Net Operating Income (NOI): SAR 8,775,000
+6. Valuation Calculation
+A. Direct Capitalization
+
+Value = NOI / Cap Rate
+= 8,775,000 / 0.065 ≈ SAR 135,000,000
+
+B. DCF Valuation (5-Year Projection)
+Discount Rate: 9%
+Terminal Cap Rate: 6.25%
+
+DCF Implied Value: SAR 150,000,000
+
+7. Value Drivers
+Strong urban growth in Riyadh
+Increasing demand for mixed-use developments
+Government-backed economic initiatives
+Improved occupancy stabilization
+8. Risk Factors
+Dependence on continued economic expansion
+Sensitivity to interest rate fluctuations
+Potential oversupply in commercial real estate
+9. Conclusion
+
+This valuation reflects a growth-optimized scenario, assuming favorable market conditions and successful lease-up performance.</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        <div class="prose prose-invert prose-sm max-w-none"><h3>Detailed Analysis of the Documents</h3>
+<h4>1. Lease Agreement Analysis</h4>
+<ul>
+<li>
+<p><strong>Parties Involved:</strong></p>
+<ul>
+<li>Lender: Al Noor Capital Lending LLC</li>
+<li>Borrower: Riyadh Asset Tokenization SPV Ltd.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Financial Terms:</strong></p>
+<ul>
+<li>Loan Amount: SAR 60,000,000</li>
+<li>Interest Rate: 6-month SAIBOR + 4.00%</li>
+<li>Default Rate: Interest Rate + 3.00%</li>
+<li>Repayment: 5 years with interest-only payments for the first 24 months</li>
+</ul>
+</li>
+<li>
+<p><strong>Security:</strong></p>
+<ul>
+<li>First-ranking mortgage over the property</li>
+<li>Assignment of rental income</li>
+<li>Pledge over SPV shares</li>
+</ul>
+</li>
+<li>
+<p><strong>Potential Conflicts and Red Flags:</strong></p>
+<ul>
+<li>The agreement mentions no undisclosed encumbrances, yet there is a seniority conflict with token holders regarding cash flow priority.</li>
+<li>The borrower must maintain a minimum occupancy of 75%, which could be challenging given the current market conditions.</li>
+<li>A decrease in property value by more than 20% is considered an event of default, which could be problematic given the fluctuating real estate market.</li>
+</ul>
+</li>
+</ul>
+<h4>2. Property Valuation Report 1 Analysis</h4>
+<ul>
+<li>
+<p><strong>Valuation:</strong></p>
+<ul>
+<li>Estimated Market Value: SAR 120,000,000</li>
+<li>Methodology: Income Capitalization Approach</li>
+<li>Key Assumptions:
+<ul>
+<li>Average Rental Yield: 6.5%</li>
+<li>Vacancy Rate: 18%</li>
+<li>Rental Growth Rate: 2% annually</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Risk Factors:</strong></p>
+<ul>
+<li>Elevated vacancy in the office segment</li>
+<li>Limited demand growth in the current market cycle</li>
+<li>Exposure to tenant turnover</li>
+</ul>
+</li>
+</ul>
+<h4>3. Property Valuation Report 2 Analysis</h4>
+<ul>
+<li>
+<p><strong>Valuation:</strong></p>
+<ul>
+<li>Estimated Market Value: SAR 150,000,000</li>
+<li>Methodology: Income Capitalization Approach and DCF Model</li>
+<li>Key Assumptions:
+<ul>
+<li>Average Rental Yield: 7.8%</li>
+<li>Vacancy Rate: 10%</li>
+<li>Rental Growth Rate: 5% annually</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Risk Factors:</strong></p>
+<ul>
+<li>Dependence on continued economic expansion</li>
+<li>Sensitivity to interest rate fluctuations</li>
+<li>Potential oversupply in commercial real estate</li>
+</ul>
+</li>
+</ul>
+<h3>Cross-Document Inconsistencies</h3>
+<ul>
+<li>
+<p><strong>Valuation Discrepancy:</strong></p>
+<ul>
+<li>Report 1 values the property at SAR 120,000,000, while Report 2 values it at SAR 150,000,000. This 25% difference could impact lending decisions and investor confidence.</li>
+</ul>
+</li>
+<li>
+<p><strong>Assumptions Variability:</strong></p>
+<ul>
+<li>Report 1 uses conservative assumptions, while Report 2 uses aggressive assumptions. This inconsistency could lead to different strategic decisions regarding asset management and investment.</li>
+</ul>
+</li>
+</ul>
+<h3>Legal and Financial Ramifications</h3>
+<ul>
+<li>
+<p><strong>Legal:</strong></p>
+<ul>
+<li>The seniority conflict in cash flow distribution could lead to legal disputes between the lender and token holders.</li>
+<li>The requirement for maintaining a minimum occupancy rate and the potential for default due to property value depreciation could lead to legal challenges.</li>
+</ul>
+</li>
+<li>
+<p><strong>Financial:</strong></p>
+<ul>
+<li>The discrepancy in property valuation could affect the perceived asset value, influencing borrowing capacity and investor interest.</li>
+<li>The aggressive assumptions in Report 2 may not materialize, leading to financial shortfalls and potential default on loan terms.</li>
+</ul>
+</li>
+</ul>
+<h3>Actionable Insights</h3>
+<ul>
+<li><strong>Verification:</strong>
+<ul>
+<li>Verify the ownership and encumbrances of the property to ensure compliance with the loan agreement.</li>
+</ul>
+</li>
+<li><strong>Reconciliation:</strong>
+<ul>
+<li>Reconcile the differences between the two valuation reports to present a unified and realistic asset value.</li>
+</ul>
+</li>
+<li><strong>Risk Mitigation:</strong>
+<ul>
+<li>Develop strategies to mitigate the risk of high vacancy rates and ensure stable rental income.</li>
+</ul>
+</li>
+<li><strong>Legal Consultation:</strong>
+<ul>
+<li>Seek legal advice to address potential conflicts in cash flow distribution and ensure compliance with all contractual obligations.</li>
+</ul>
+</li>
+</ul>
+</div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">valuation_agent</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">list_directory</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;.&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">DIR  CONVERSATIONS
+FILE Comprehensive-Analysis-of-Property-Documents-2026-04-25-152250.html
+FILE LEASEAGREEMENT.txt
+FILE PROPERTYVALUATIONREPORT1.txt
+FILE PROPERTYVALUATIONREPORT2.txt
+FILE airbnb-old.yaml
+FILE airbnb.yaml
+FILE backendspec-old.yaml
+FILE backendspec.yaml
+FILE blog-old.yaml
+FILE blog.yaml
+DIR  cagent-yaml-collection
+FILE cagent1.yaml
+FILE cagent2.yaml
+DIR  codebase
+FILE dev-team-old.yaml
+FILE dev-team.yaml
+FILE docker-agent-old.yaml
+FILE docker-agent-windows-amd64.exe
+FILE docker-agent.yaml
+FILE finance-old.yaml
+FILE finance.yaml
+FILE legal-agent-smaller.yaml
+FILE legal-agent.yaml
+DIR  mcp-server-airbnb
+FILE mcp_generator-old.yaml
+FILE mcp_generator.yaml
+FILE nightly-scanner-old.yaml
+FILE nightly-scanner.yaml
+DIR  node_modules
+FILE run_instructions.txt
+FILE scanner-memory.db
+FILE scanner-memory.db-shm
+FILE scanner-memory.db-wal
+FILE weatherdev-old.yaml
+FILE weatherdev.yaml
+</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_file</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT1.txt&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">PROPERTY VALUATION REPORT
+
+Client: Riyadh Asset Tokenization SPV
+Property Type: Mixed-Use (Commercial &#43; Residential)
+Location: Riyadh, Saudi Arabia
+Valuation Date: [Insert Date]
+Prepared By: Independent Valuation Consultant
+
+1. Executive Summary
+
+This report provides an independent valuation of a mixed-use property located in Riyadh. Based on conservative assumptions regarding occupancy, rental growth, and capitalization rates, the estimated market value is:
+
+SAR 120,000,000
+
+2. Property Description
+Asset Type: Mixed-use development
+Components:
+Ground-floor retail units
+Office spaces (floors 1–3)
+Residential apartments (floors 4–10)
+Total Built-Up Area: ~18,500 sqm
+Occupancy Rate: 82%
+3. Valuation Methodology
+
+The valuation primarily uses the Income Capitalization Approach, supported by a market comparison review.
+
+4. Key Assumptions (Conservative)
+Average Rental Yield: 6.5%
+Vacancy Rate: 18%
+Rental Growth Rate: 2% annually
+Capitalization Rate: 8.0%
+Operating Expense Ratio: 28%
+5. Financial Overview
+Gross Potential Income: SAR 10,800,000
+Effective Gross Income (after vacancy): SAR 8,856,000
+Net Operating Income (NOI): SAR 6,376,320
+6. Valuation Calculation
+
+Using direct capitalization:
+
+Value = NOI / Cap Rate
+= 6,376,320 / 0.08 ≈ SAR 79,704,000
+
+After applying market normalization adjustments and premium for location:
+
+Final Adjusted Value: SAR 120,000,000
+
+7. Risk Factors
+Elevated vacancy in office segment
+محدود demand growth in current market cycle
+Exposure to tenant turnover
+Financing constraints affecting buyers
+8. Conclusion
+
+This valuation reflects a risk-adjusted, conservative market position, suitable for regulatory and compliance-sensitive structuring.</pre>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_file</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">PROPERTY VALUATION REPORT
+
+Client: Riyadh Asset Tokenization SPV
+Property Type: Mixed-Use (Commercial &#43; Residential)
+Location: Riyadh, Saudi Arabia
+Valuation Date: [Insert Date]
+Prepared By: Independent Valuation Consultant
+
+1. Executive Summary
+
+This report presents a valuation based on forward-looking growth assumptions and strong demand projections in Riyadh’s mixed-use sector.
+
+Estimated Market Value: SAR 150,000,000
+
+2. Property Description
+
+(Same as Report A — intentionally consistent)
+
+3. Valuation Methodology
+Income Capitalization Approach
+Discounted Cash Flow (DCF) model (5-year projection)
+4. Key Assumptions (Aggressive)
+Average Rental Yield: 7.8%
+Vacancy Rate: 10%
+Rental Growth Rate: 5% annually
+Capitalization Rate: 6.5%
+Operating Expense Ratio: 22%
+5. Financial Overview
+Gross Potential Income: SAR 12,500,000
+Effective Gross Income: SAR 11,250,000
+Net Operating Income (NOI): SAR 8,775,000
+6. Valuation Calculation
+A. Direct Capitalization
+
+Value = NOI / Cap Rate
+= 8,775,000 / 0.065 ≈ SAR 135,000,000
+
+B. DCF Valuation (5-Year Projection)
+Discount Rate: 9%
+Terminal Cap Rate: 6.25%
+
+DCF Implied Value: SAR 150,000,000
+
+7. Value Drivers
+Strong urban growth in Riyadh
+Increasing demand for mixed-use developments
+Government-backed economic initiatives
+Improved occupancy stabilization
+8. Risk Factors
+Dependence on continued economic expansion
+Sensitivity to interest rate fluctuations
+Potential oversupply in commercial real estate
+9. Conclusion
+
+This valuation reflects a growth-optimized scenario, assuming favorable market conditions and successful lease-up performance.</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        <div class="prose prose-invert prose-sm max-w-none"><p>Here are the extracted valuation details from both PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt, along with identified inconsistencies:</p>
+<h3>PROPERTYVALUATIONREPORT1.txt:</h3>
+<ul>
+<li><strong>Client:</strong> Riyadh Asset Tokenization SPV</li>
+<li><strong>Property Type:</strong> Mixed-Use (Commercial + Residential)</li>
+<li><strong>Location:</strong> Riyadh, Saudi Arabia</li>
+<li><strong>Valuation Methodology:</strong> Income Capitalization Approach, supported by market comparison review.</li>
+<li><strong>Estimated Market Value:</strong> SAR 120,000,000</li>
+<li><strong>Key Assumptions (Conservative):</strong>
+<ul>
+<li>Average Rental Yield: 6.5%</li>
+<li>Vacancy Rate: 18%</li>
+<li>Rental Growth Rate: 2% annually</li>
+<li>Capitalization Rate: 8.0%</li>
+<li>Operating Expense Ratio: 28%</li>
+</ul>
+</li>
+<li><strong>Financial Overview:</strong>
+<ul>
+<li>Gross Potential Income: SAR 10,800,000</li>
+<li>Effective Gross Income: SAR 8,856,000</li>
+<li>Net Operating Income (NOI): SAR 6,376,320</li>
+</ul>
+</li>
+<li><strong>Valuation Calculation:</strong>
+<ul>
+<li>Value = NOI / Cap Rate = 6,376,320 / 0.08 ≈ SAR 79,704,000</li>
+<li>Final Adjusted Value: SAR 120,000,000</li>
+</ul>
+</li>
+<li><strong>Risk Factors:</strong>
+<ul>
+<li>Elevated vacancy in office segment</li>
+<li>Limited demand growth in the current market cycle</li>
+<li>Exposure to tenant turnover</li>
+<li>Financing constraints affecting buyers</li>
+</ul>
+</li>
+</ul>
+<h3>PROPERTYVALUATIONREPORT2.txt:</h3>
+<ul>
+<li><strong>Client:</strong> Riyadh Asset Tokenization SPV</li>
+<li><strong>Property Type:</strong> Mixed-Use (Commercial + Residential)</li>
+<li><strong>Location:</strong> Riyadh, Saudi Arabia</li>
+<li><strong>Valuation Methodology:</strong> Income Capitalization Approach, Discounted Cash Flow (DCF) model (5-year projection).</li>
+<li><strong>Estimated Market Value:</strong> SAR 150,000,000</li>
+<li><strong>Key Assumptions (Aggressive):</strong>
+<ul>
+<li>Average Rental Yield: 7.8%</li>
+<li>Vacancy Rate: 10%</li>
+<li>Rental Growth Rate: 5% annually</li>
+<li>Capitalization Rate: 6.5%</li>
+<li>Operating Expense Ratio: 22%</li>
+</ul>
+</li>
+<li><strong>Financial Overview:</strong>
+<ul>
+<li>Gross Potential Income: SAR 12,500,000</li>
+<li>Effective Gross Income: SAR 11,250,000</li>
+<li>Net Operating Income (NOI): SAR 8,775,000</li>
+</ul>
+</li>
+<li><strong>Valuation Calculation:</strong>
+<ul>
+<li>A. Direct Capitalization: Value = NOI / Cap Rate = 8,775,000 / 0.065 ≈ SAR 135,000,000</li>
+<li>B. DCF Valuation (5-Year Projection): DCF Implied Value: SAR 150,000,000</li>
+</ul>
+</li>
+<li><strong>Value Drivers:</strong>
+<ul>
+<li>Strong urban growth in Riyadh</li>
+<li>Increasing demand for mixed-use developments</li>
+<li>Government-backed economic initiatives</li>
+<li>Improved occupancy stabilization</li>
+</ul>
+</li>
+<li><strong>Risk Factors:</strong>
+<ul>
+<li>Dependence on continued economic expansion</li>
+<li>Sensitivity to interest rate fluctuations</li>
+<li>Potential oversupply in commercial real estate</li>
+</ul>
+</li>
+</ul>
+<h3>Inconsistencies:</h3>
+<ol>
+<li>
+<p><strong>Market Value Estimation:</strong></p>
+<ul>
+<li>Report 1 estimates the market value at SAR 120,000,000.</li>
+<li>Report 2 estimates the market value at SAR 150,000,000.</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation Methodology:</strong></p>
+<ul>
+<li>Report 1 primarily uses the Income Capitalization Approach.</li>
+<li>Report 2 uses both the Income Capitalization Approach and a DCF model.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Assumptions:</strong></p>
+<ul>
+<li>Report 1 has more conservative assumptions with a higher capitalization rate and vacancy rate.</li>
+<li>Report 2 adopts aggressive assumptions with a lower capitalization rate and vacancy rate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Financial Overview:</strong></p>
+<ul>
+<li>Report 2 projects higher Gross Potential and Net Operating Income.</li>
+</ul>
+</li>
+<li>
+<p><strong>Risk Factors and Value Drivers:</strong></p>
+<ul>
+<li>Report 1 focuses on risks related to vacancy and tenant turnover.</li>
+<li>Report 2 highlights growth potential and economic initiatives as value drivers.</li>
+</ul>
+</li>
+</ol>
+<p>These differences reflect varying perspectives on market conditions and property performance, leading to significant discrepancies in estimated market values.</p>
+</div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">shariah_agent</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_multiple_files</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;json&#34;: true,
+  &#34;paths&#34;: [
+    &#34;LEASEAGREEMENT.txt&#34;,
+    &#34;PROPERTYVALUATIONREPORT1.txt&#34;,
+    &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+  ]
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">[
+  {
+    &#34;content&#34;: &#34;THIS FACILITY AGREEMENT is made on [Insert Date]\r\n\r\nBETWEEN:\r\n\r\nAl Noor Capital Lending LLC, a company incorporated under the laws of the Kingdom of Saudi Arabia\r\n(the “Lender”)\r\n\r\nAND\r\n\r\nRiyadh Asset Tokenization SPV Ltd., a special purpose vehicle established for asset holding and tokenization\r\n(the “Borrower”)\r\n1. DEFINITIONS AND INTERPRETATION\r\n\r\n“Facility” means the term loan facility made available under this Agreement.\r\n\r\n“Interest Rate” means 6-month SAIBOR &#43; 4.00% per annum.\r\n\r\n“Default Rate” means the Interest Rate plus 3.00% per annum.\r\n\r\n“Security” means all collateral granted under Clause 8.\r\n\r\n2. FACILITY\r\n\r\n2.1 The Lender agrees to make available to the Borrower a term loan facility in the amount of:\r\n\r\nSAR 60,000,000 (Sixty Million Saudi Riyals)\r\n\r\n2.2 Purpose:\r\nThe Facility shall be used for:\r\n\r\nAcquisition and development of a mixed-use real estate property in Riyadh\r\nGeneral corporate purposes\r\n3. AVAILABILITY\r\n\r\n3.1 The Facility shall be available for drawdown within 60 days of execution.\r\n\r\n3.2 Conditions precedent include:\r\n\r\nExecution of security documents\r\nEvidence of property ownership\r\nNo material adverse change\r\n4. INTEREST\r\n\r\n4.1 The Borrower shall pay interest on the outstanding principal amount at the Interest Rate.\r\n\r\n4.2 Interest shall:\r\n\r\nAccrue daily\r\nBe payable semi-annually in arrears\r\n\r\n4.3 If the Borrower fails to pay any amount when due, Default Interest shall apply.\r\n\r\n5. REPAYMENT\r\n\r\n5.1 The Facility shall be repaid over a period of 5 years.\r\n\r\n5.2 Repayment structure:\r\n\r\nInterest-only payments for first 24 months\r\nPrincipal amortization thereafter\r\n\r\n5.3 Final balloon payment due at maturity.\r\n\r\n6. PREPAYMENT\r\n\r\n6.1 The Borrower may prepay the Facility subject to:\r\n\r\n2% prepayment fee (first 2 years)\r\n7. REPRESENTATIONS AND WARRANTIES\r\n\r\nThe Borrower represents that:\r\n\r\nIt has valid title to the property\r\nNo undisclosed encumbrances exist (⚠️ intentionally contradicted elsewhere in test set)\r\nIt is compliant with applicable laws\r\n8. SECURITY\r\n\r\n8.1 The Facility shall be secured by:\r\n\r\nFirst-ranking mortgage over the property\r\nAssignment of rental income\r\nPledge over SPV shares\r\n\r\n8.2 The Borrower agrees that:\r\n\r\nThe Lender shall have priority rights over all cash flows, including rental income, before any distributions to equity holders or token investors.\r\n\r\n(⚠️ This creates a seniority conflict with token holders)\r\n\r\n9. COVENANTS\r\n\r\nThe Borrower undertakes:\r\n\r\nTo maintain minimum occupancy of 75%\r\nNot to incur additional debt without Lender consent\r\nTo ensure rental proceeds are deposited into a controlled account\r\n10. EVENTS OF DEFAULT\r\n\r\nEvents include:\r\n\r\nNon-payment\r\nBreach of covenants\r\nانخفاض property value by more than 20%\r\nInsolvency\r\n11. CONSEQUENCES OF DEFAULT\r\n\r\nUpon default:\r\n\r\nAll outstanding amounts become immediately due\r\nDefault Interest applies\r\nLender may enforce security\r\n12. GOVERNING LAW\r\n\r\nThis Agreement shall be governed by the laws of the Kingdom of Saudi Arabia.\r\n\r\n13. MISCELLANEOUS\r\nThis Agreement constitutes the entire agreement\r\nAmendments must be in writing\r\nAssignment by Lender permitted without consent&#34;,
+    &#34;path&#34;: &#34;LEASEAGREEMENT.txt&#34;
+  },
+  {
+    &#34;content&#34;: &#34;PROPERTY VALUATION REPORT\r\n\r\nClient: Riyadh Asset Tokenization SPV\r\nProperty Type: Mixed-Use (Commercial &#43; Residential)\r\nLocation: Riyadh, Saudi Arabia\r\nValuation Date: [Insert Date]\r\nPrepared By: Independent Valuation Consultant\r\n\r\n1. Executive Summary\r\n\r\nThis report provides an independent valuation of a mixed-use property located in Riyadh. Based on conservative assumptions regarding occupancy, rental growth, and capitalization rates, the estimated market value is:\r\n\r\nSAR 120,000,000\r\n\r\n2. Property Description\r\nAsset Type: Mixed-use development\r\nComponents:\r\nGround-floor retail units\r\nOffice spaces (floors 1–3)\r\nResidential apartments (floors 4–10)\r\nTotal Built-Up Area: ~18,500 sqm\r\nOccupancy Rate: 82%\r\n3. Valuation Methodology\r\n\r\nThe valuation primarily uses the Income Capitalization Approach, supported by a market comparison review.\r\n\r\n4. Key Assumptions (Conservative)\r\nAverage Rental Yield: 6.5%\r\nVacancy Rate: 18%\r\nRental Growth Rate: 2% annually\r\nCapitalization Rate: 8.0%\r\nOperating Expense Ratio: 28%\r\n5. Financial Overview\r\nGross Potential Income: SAR 10,800,000\r\nEffective Gross Income (after vacancy): SAR 8,856,000\r\nNet Operating Income (NOI): SAR 6,376,320\r\n6. Valuation Calculation\r\n\r\nUsing direct capitalization:\r\n\r\nValue = NOI / Cap Rate\r\n= 6,376,320 / 0.08 ≈ SAR 79,704,000\r\n\r\nAfter applying market normalization adjustments and premium for location:\r\n\r\nFinal Adjusted Value: SAR 120,000,000\r\n\r\n7. Risk Factors\r\nElevated vacancy in office segment\r\nمحدود demand growth in current market cycle\r\nExposure to tenant turnover\r\nFinancing constraints affecting buyers\r\n8. Conclusion\r\n\r\nThis valuation reflects a risk-adjusted, conservative market position, suitable for regulatory and compliance-sensitive structuring.&#34;,
+    &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT1.txt&#34;
+  },
+  {
+    &#34;content&#34;: &#34;PROPERTY VALUATION REPORT\r\n\r\nClient: Riyadh Asset Tokenization SPV\r\nProperty Type: Mixed-Use (Commercial &#43; Residential)\r\nLocation: Riyadh, Saudi Arabia\r\nValuation Date: [Insert Date]\r\nPrepared By: Independent Valuation Consultant\r\n\r\n1. Executive Summary\r\n\r\nThis report presents a valuation based on forward-looking growth assumptions and strong demand projections in Riyadh’s mixed-use sector.\r\n\r\nEstimated Market Value: SAR 150,000,000\r\n\r\n2. Property Description\r\n\r\n(Same as Report A — intentionally consistent)\r\n\r\n3. Valuation Methodology\r\nIncome Capitalization Approach\r\nDiscounted Cash Flow (DCF) model (5-year projection)\r\n4. Key Assumptions (Aggressive)\r\nAverage Rental Yield: 7.8%\r\nVacancy Rate: 10%\r\nRental Growth Rate: 5% annually\r\nCapitalization Rate: 6.5%\r\nOperating Expense Ratio: 22%\r\n5. Financial Overview\r\nGross Potential Income: SAR 12,500,000\r\nEffective Gross Income: SAR 11,250,000\r\nNet Operating Income (NOI): SAR 8,775,000\r\n6. Valuation Calculation\r\nA. Direct Capitalization\r\n\r\nValue = NOI / Cap Rate\r\n= 8,775,000 / 0.065 ≈ SAR 135,000,000\r\n\r\nB. DCF Valuation (5-Year Projection)\r\nDiscount Rate: 9%\r\nTerminal Cap Rate: 6.25%\r\n\r\nDCF Implied Value: SAR 150,000,000\r\n\r\n7. Value Drivers\r\nStrong urban growth in Riyadh\r\nIncreasing demand for mixed-use developments\r\nGovernment-backed economic initiatives\r\nImproved occupancy stabilization\r\n8. Risk Factors\r\nDependence on continued economic expansion\r\nSensitivity to interest rate fluctuations\r\nPotential oversupply in commercial real estate\r\n9. Conclusion\r\n\r\nThis valuation reflects a growth-optimized scenario, assuming favorable market conditions and successful lease-up performance.&#34;,
+    &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+  }
+]</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        <div class="prose prose-invert prose-sm max-w-none"><p>Let's review the Shariah compliance of each document:</p>
+<h3>LEASEAGREEMENT.txt</h3>
+<p><strong>Issues Identified:</strong></p>
+<ol>
+<li>
+<p><strong>Riba (Interest):</strong></p>
+<ul>
+<li>The agreement includes an &quot;Interest Rate&quot; of 6-month SAIBOR + 4.00% per annum and a &quot;Default Rate&quot; that adds 3.00% to the Interest Rate. This constitutes Riba, which is prohibited in Islamic finance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gharar (Uncertainty):</strong></p>
+<ul>
+<li>The agreement is quite detailed, with clear terms and conditions, so it does not seem to have issues with excessive uncertainty.</li>
+</ul>
+</li>
+<li>
+<p><strong>Haram Assets:</strong></p>
+<ul>
+<li>The agreement involves real estate, which is generally permissible. However, the connection to a conventional lending structure involving interest makes it non-compliant.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> The agreement is not Shariah-compliant due to the inclusion of interest. An alternative structure such as a Musharakah (joint venture) or Ijarah (leasing) should be considered.</p>
+<h3>PROPERTYVALUATIONREPORT1.txt</h3>
+<p><strong>Issues Identified:</strong></p>
+<ol>
+<li>
+<p><strong>Asset Verification:</strong></p>
+<ul>
+<li>The property is a mixed-use development in Riyadh, which is permissible as long as it does not involve any haram activities or industries.</li>
+</ul>
+</li>
+<li>
+<p><strong>Financial Structure:</strong></p>
+<ul>
+<li>The report is a valuation and does not involve a financial structure that would include interest or risk-sharing, so it does not directly violate Shariah principles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Contract Terms:</strong></p>
+<ul>
+<li>The valuation report is clear and does not contain ambiguity.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> The valuation report itself does not violate Shariah principles, as it is purely informational and does not involve interest or haram activities.</p>
+<h3>PROPERTYVALUATIONREPORT2.txt</h3>
+<p><strong>Issues Identified:</strong></p>
+<ol>
+<li>
+<p><strong>Asset Verification:</strong></p>
+<ul>
+<li>Similar to the first report, the property is permissible under Shariah law.</li>
+</ul>
+</li>
+<li>
+<p><strong>Financial Structure:</strong></p>
+<ul>
+<li>This report also does not involve financial transactions, so it does not directly conflict with Shariah principles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Contract Terms:</strong></p>
+<ul>
+<li>The report is clear and straightforward, with no excessive uncertainty.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> This valuation report is compliant with Shariah principles, as it is informational and does not involve interest or haram activities.</p>
+<h3>Overall Recommendations:</h3>
+<ul>
+<li><strong>LEASEAGREEMENT.txt</strong>: Needs restructuring to remove interest-based elements. Consider using a Shariah-compliant contract like Musharakah or Ijarah.</li>
+<li><strong>PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt</strong>: Both reports are compliant and can be used as part of a Shariah-compliant structure, provided the overall transaction structure adheres to Islamic finance principles.</li>
+</ul>
+</div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">compliance_agent</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        
+        <div class="space-y-2">
+<div class="text-sm">
+    <div class="flex w-full items-center gap-2 py-1 cursor-pointer select-none hover:bg-secondary/50 transition-colors" onclick="toggle(this)">
+        <svg class="chevron-right size-3 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><svg class="chevron-down size-3 text-muted-foreground" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <span class="text-tui-purple">⚡</span>
+        <span class="font-medium text-tui-blue">read_multiple_files</span>
+        <span class="ml-auto"><svg class="size-3 text-tui-green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+    </div>
+    <div class="collapsible-content pl-5 py-2 space-y-3" style="display: none;">
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Arguments</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap">{
+  &#34;json&#34;: true,
+  &#34;paths&#34;: [
+    &#34;LEASEAGREEMENT.txt&#34;,
+    &#34;PROPERTYVALUATIONREPORT1.txt&#34;,
+    &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+  ]
+}</pre>
+        </div>
+        
+        
+        <div>
+            <div class="text-xs text-muted-foreground mb-1">Result</div>
+            <pre class="bg-secondary/50 p-2 text-xs overflow-x-auto whitespace-pre-wrap max-h-64 overflow-y-auto">[
+  {
+    &#34;content&#34;: &#34;THIS FACILITY AGREEMENT is made on [Insert Date]\r\n\r\nBETWEEN:\r\n\r\nAl Noor Capital Lending LLC, a company incorporated under the laws of the Kingdom of Saudi Arabia\r\n(the “Lender”)\r\n\r\nAND\r\n\r\nRiyadh Asset Tokenization SPV Ltd., a special purpose vehicle established for asset holding and tokenization\r\n(the “Borrower”)\r\n1. DEFINITIONS AND INTERPRETATION\r\n\r\n“Facility” means the term loan facility made available under this Agreement.\r\n\r\n“Interest Rate” means 6-month SAIBOR &#43; 4.00% per annum.\r\n\r\n“Default Rate” means the Interest Rate plus 3.00% per annum.\r\n\r\n“Security” means all collateral granted under Clause 8.\r\n\r\n2. FACILITY\r\n\r\n2.1 The Lender agrees to make available to the Borrower a term loan facility in the amount of:\r\n\r\nSAR 60,000,000 (Sixty Million Saudi Riyals)\r\n\r\n2.2 Purpose:\r\nThe Facility shall be used for:\r\n\r\nAcquisition and development of a mixed-use real estate property in Riyadh\r\nGeneral corporate purposes\r\n3. AVAILABILITY\r\n\r\n3.1 The Facility shall be available for drawdown within 60 days of execution.\r\n\r\n3.2 Conditions precedent include:\r\n\r\nExecution of security documents\r\nEvidence of property ownership\r\nNo material adverse change\r\n4. INTEREST\r\n\r\n4.1 The Borrower shall pay interest on the outstanding principal amount at the Interest Rate.\r\n\r\n4.2 Interest shall:\r\n\r\nAccrue daily\r\nBe payable semi-annually in arrears\r\n\r\n4.3 If the Borrower fails to pay any amount when due, Default Interest shall apply.\r\n\r\n5. REPAYMENT\r\n\r\n5.1 The Facility shall be repaid over a period of 5 years.\r\n\r\n5.2 Repayment structure:\r\n\r\nInterest-only payments for first 24 months\r\nPrincipal amortization thereafter\r\n\r\n5.3 Final balloon payment due at maturity.\r\n\r\n6. PREPAYMENT\r\n\r\n6.1 The Borrower may prepay the Facility subject to:\r\n\r\n2% prepayment fee (first 2 years)\r\n7. REPRESENTATIONS AND WARRANTIES\r\n\r\nThe Borrower represents that:\r\n\r\nIt has valid title to the property\r\nNo undisclosed encumbrances exist (⚠️ intentionally contradicted elsewhere in test set)\r\nIt is compliant with applicable laws\r\n8. SECURITY\r\n\r\n8.1 The Facility shall be secured by:\r\n\r\nFirst-ranking mortgage over the property\r\nAssignment of rental income\r\nPledge over SPV shares\r\n\r\n8.2 The Borrower agrees that:\r\n\r\nThe Lender shall have priority rights over all cash flows, including rental income, before any distributions to equity holders or token investors.\r\n\r\n(⚠️ This creates a seniority conflict with token holders)\r\n\r\n9. COVENANTS\r\n\r\nThe Borrower undertakes:\r\n\r\nTo maintain minimum occupancy of 75%\r\nNot to incur additional debt without Lender consent\r\nTo ensure rental proceeds are deposited into a controlled account\r\n10. EVENTS OF DEFAULT\r\n\r\nEvents include:\r\n\r\nNon-payment\r\nBreach of covenants\r\nانخفاض property value by more than 20%\r\nInsolvency\r\n11. CONSEQUENCES OF DEFAULT\r\n\r\nUpon default:\r\n\r\nAll outstanding amounts become immediately due\r\nDefault Interest applies\r\nLender may enforce security\r\n12. GOVERNING LAW\r\n\r\nThis Agreement shall be governed by the laws of the Kingdom of Saudi Arabia.\r\n\r\n13. MISCELLANEOUS\r\nThis Agreement constitutes the entire agreement\r\nAmendments must be in writing\r\nAssignment by Lender permitted without consent&#34;,
+    &#34;path&#34;: &#34;LEASEAGREEMENT.txt&#34;
+  },
+  {
+    &#34;content&#34;: &#34;PROPERTY VALUATION REPORT\r\n\r\nClient: Riyadh Asset Tokenization SPV\r\nProperty Type: Mixed-Use (Commercial &#43; Residential)\r\nLocation: Riyadh, Saudi Arabia\r\nValuation Date: [Insert Date]\r\nPrepared By: Independent Valuation Consultant\r\n\r\n1. Executive Summary\r\n\r\nThis report provides an independent valuation of a mixed-use property located in Riyadh. Based on conservative assumptions regarding occupancy, rental growth, and capitalization rates, the estimated market value is:\r\n\r\nSAR 120,000,000\r\n\r\n2. Property Description\r\nAsset Type: Mixed-use development\r\nComponents:\r\nGround-floor retail units\r\nOffice spaces (floors 1–3)\r\nResidential apartments (floors 4–10)\r\nTotal Built-Up Area: ~18,500 sqm\r\nOccupancy Rate: 82%\r\n3. Valuation Methodology\r\n\r\nThe valuation primarily uses the Income Capitalization Approach, supported by a market comparison review.\r\n\r\n4. Key Assumptions (Conservative)\r\nAverage Rental Yield: 6.5%\r\nVacancy Rate: 18%\r\nRental Growth Rate: 2% annually\r\nCapitalization Rate: 8.0%\r\nOperating Expense Ratio: 28%\r\n5. Financial Overview\r\nGross Potential Income: SAR 10,800,000\r\nEffective Gross Income (after vacancy): SAR 8,856,000\r\nNet Operating Income (NOI): SAR 6,376,320\r\n6. Valuation Calculation\r\n\r\nUsing direct capitalization:\r\n\r\nValue = NOI / Cap Rate\r\n= 6,376,320 / 0.08 ≈ SAR 79,704,000\r\n\r\nAfter applying market normalization adjustments and premium for location:\r\n\r\nFinal Adjusted Value: SAR 120,000,000\r\n\r\n7. Risk Factors\r\nElevated vacancy in office segment\r\nمحدود demand growth in current market cycle\r\nExposure to tenant turnover\r\nFinancing constraints affecting buyers\r\n8. Conclusion\r\n\r\nThis valuation reflects a risk-adjusted, conservative market position, suitable for regulatory and compliance-sensitive structuring.&#34;,
+    &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT1.txt&#34;
+  },
+  {
+    &#34;content&#34;: &#34;PROPERTY VALUATION REPORT\r\n\r\nClient: Riyadh Asset Tokenization SPV\r\nProperty Type: Mixed-Use (Commercial &#43; Residential)\r\nLocation: Riyadh, Saudi Arabia\r\nValuation Date: [Insert Date]\r\nPrepared By: Independent Valuation Consultant\r\n\r\n1. Executive Summary\r\n\r\nThis report presents a valuation based on forward-looking growth assumptions and strong demand projections in Riyadh’s mixed-use sector.\r\n\r\nEstimated Market Value: SAR 150,000,000\r\n\r\n2. Property Description\r\n\r\n(Same as Report A — intentionally consistent)\r\n\r\n3. Valuation Methodology\r\nIncome Capitalization Approach\r\nDiscounted Cash Flow (DCF) model (5-year projection)\r\n4. Key Assumptions (Aggressive)\r\nAverage Rental Yield: 7.8%\r\nVacancy Rate: 10%\r\nRental Growth Rate: 5% annually\r\nCapitalization Rate: 6.5%\r\nOperating Expense Ratio: 22%\r\n5. Financial Overview\r\nGross Potential Income: SAR 12,500,000\r\nEffective Gross Income: SAR 11,250,000\r\nNet Operating Income (NOI): SAR 8,775,000\r\n6. Valuation Calculation\r\nA. Direct Capitalization\r\n\r\nValue = NOI / Cap Rate\r\n= 8,775,000 / 0.065 ≈ SAR 135,000,000\r\n\r\nB. DCF Valuation (5-Year Projection)\r\nDiscount Rate: 9%\r\nTerminal Cap Rate: 6.25%\r\n\r\nDCF Implied Value: SAR 150,000,000\r\n\r\n7. Value Drivers\r\nStrong urban growth in Riyadh\r\nIncreasing demand for mixed-use developments\r\nGovernment-backed economic initiatives\r\nImproved occupancy stabilization\r\n8. Risk Factors\r\nDependence on continued economic expansion\r\nSensitivity to interest rate fluctuations\r\nPotential oversupply in commercial real estate\r\n9. Conclusion\r\n\r\nThis valuation reflects a growth-optimized scenario, assuming favorable market conditions and successful lease-up performance.&#34;,
+    &#34;path&#34;: &#34;PROPERTYVALUATIONREPORT2.txt&#34;
+  }
+]</pre>
+        </div>
+        
+    </div>
+</div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <div class="hidden sm:block sm:w-14 shrink-0"></div>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        <div class="prose prose-invert prose-sm max-w-none"><h3>Legal Compliance Status:</h3>
+<h4>LEASEAGREEMENT.txt</h4>
+<ol>
+<li>
+<p><strong>SAMA Compliance:</strong></p>
+<ul>
+<li><strong>License Requirement:</strong> The agreement involves a financial facility, which may require a SAMA license for the lender.</li>
+<li><strong>AML/KYC Procedures:</strong> Not explicitly mentioned in the agreement.</li>
+<li><strong>Sanctions Screening:</strong> Not addressed.</li>
+<li><strong>Transaction Monitoring:</strong> Not addressed.</li>
+</ul>
+</li>
+<li>
+<p><strong>CMA Compliance:</strong></p>
+<ul>
+<li><strong>Security Qualification:</strong> The agreement involves financial transactions that may qualify as securities.</li>
+<li><strong>Registration and Licensing:</strong> Not mentioned, but may be required.</li>
+<li><strong>Investor Accreditation:</strong> Not addressed.</li>
+<li><strong>Disclosure Requirements:</strong> Basic terms are disclosed, but further details may be needed.</li>
+<li><strong>Marketing Materials:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>FATF Compliance:</strong></p>
+<ul>
+<li><strong>KYC/AML Procedures:</strong> Not explicitly mentioned.</li>
+<li><strong>Beneficial Ownership:</strong> The agreement mentions the SPV but does not detail beneficial ownership transparency.</li>
+</ul>
+</li>
+<li>
+<p><strong>PDPL Compliance:</strong></p>
+<ul>
+<li><strong>Data Protection:</strong> Not addressed.</li>
+<li><strong>Consent Mechanisms:</strong> Not mentioned.</li>
+<li><strong>Data Retention Policies:</strong> Not mentioned.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Issues Found:</strong></p>
+<ul>
+<li>Potential conflict with token holders regarding cash flow priority.</li>
+<li>Lack of explicit mention of AML/KYC procedures.</li>
+</ul>
+<h4>PROPERTYVALUATIONREPORT1.txt</h4>
+<ol>
+<li>
+<p><strong>SAMA Compliance:</strong></p>
+<ul>
+<li><strong>License Requirement:</strong> Not applicable.</li>
+<li><strong>AML/KYC Procedures:</strong> Not applicable.</li>
+<li><strong>Sanctions Screening:</strong> Not applicable.</li>
+<li><strong>Transaction Monitoring:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>CMA Compliance:</strong></p>
+<ul>
+<li><strong>Security Qualification:</strong> The report supports asset valuation, which may be used in securities offerings.</li>
+<li><strong>Registration and Licensing:</strong> Not directly applicable.</li>
+<li><strong>Investor Accreditation:</strong> Not addressed.</li>
+<li><strong>Disclosure Requirements:</strong> Comprehensive valuation details provided.</li>
+<li><strong>Marketing Materials:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>FATF Compliance:</strong></p>
+<ul>
+<li><strong>KYC/AML Procedures:</strong> Not applicable.</li>
+<li><strong>Beneficial Ownership:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>PDPL Compliance:</strong></p>
+<ul>
+<li><strong>Data Protection:</strong> Not addressed.</li>
+<li><strong>Consent Mechanisms:</strong> Not mentioned.</li>
+<li><strong>Data Retention Policies:</strong> Not mentioned.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Issues Found:</strong></p>
+<ul>
+<li>None significant for regulatory compliance, assuming the valuation is used internally.</li>
+</ul>
+<h4>PROPERTYVALUATIONREPORT2.txt</h4>
+<ol>
+<li>
+<p><strong>SAMA Compliance:</strong></p>
+<ul>
+<li><strong>License Requirement:</strong> Not applicable.</li>
+<li><strong>AML/KYC Procedures:</strong> Not applicable.</li>
+<li><strong>Sanctions Screening:</strong> Not applicable.</li>
+<li><strong>Transaction Monitoring:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>CMA Compliance:</strong></p>
+<ul>
+<li><strong>Security Qualification:</strong> The report supports asset valuation, which may be used in securities offerings.</li>
+<li><strong>Registration and Licensing:</strong> Not directly applicable.</li>
+<li><strong>Investor Accreditation:</strong> Not addressed.</li>
+<li><strong>Disclosure Requirements:</strong> Comprehensive valuation details provided.</li>
+<li><strong>Marketing Materials:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>FATF Compliance:</strong></p>
+<ul>
+<li><strong>KYC/AML Procedures:</strong> Not applicable.</li>
+<li><strong>Beneficial Ownership:</strong> Not applicable.</li>
+</ul>
+</li>
+<li>
+<p><strong>PDPL Compliance:</strong></p>
+<ul>
+<li><strong>Data Protection:</strong> Not addressed.</li>
+<li><strong>Consent Mechanisms:</strong> Not mentioned.</li>
+<li><strong>Data Retention Policies:</strong> Not mentioned.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Issues Found:</strong></p>
+<ul>
+<li>None significant for regulatory compliance, assuming the valuation is used internally.</li>
+</ul>
+<h3>Recommendations:</h3>
+<ul>
+<li>
+<p><strong>For LEASEAGREEMENT.txt:</strong></p>
+<ul>
+<li>Clarify AML/KYC procedures and ensure compliance with SAMA and FATF standards.</li>
+<li>Address the potential conflict with token holders regarding cash flow priority.</li>
+<li>Ensure any necessary licenses or registrations with SAMA and CMA are obtained.</li>
+</ul>
+</li>
+<li>
+<p><strong>For PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt:</strong></p>
+<ul>
+<li>Ensure the valuations are used in compliance with CMA regulations if used for securities offerings.</li>
+<li>Consider data protection and privacy measures if personal data is involved in the valuation process.</li>
+</ul>
+</li>
+</ul>
+<h3>Overall Status:</h3>
+<ul>
+<li><strong>LEASEAGREEMENT.txt:</strong> Needs review for compliance with SAMA and FATF.</li>
+<li><strong>PROPERTYVALUATIONREPORT1.txt and PROPERTYVALUATIONREPORT2.txt:</strong> Compliant for internal use, but review needed if used for public offerings.</li>
+</ul>
+</div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="group is-assistant flex w-full py-3 border-b border-border flex-col gap-1 sm:flex-row sm:items-start sm:gap-3">
+    
+    <span class="inline-flex items-center self-start shrink-0 px-2 py-0.5 text-xs font-medium rounded sm:w-14 sm:justify-center bg-tui-cyan/20 text-tui-cyan">root</span>
+    
+    <div class="flex-1 flex flex-col gap-3 overflow-hidden text-sm">
+        
+        
+        <div class="prose prose-invert prose-sm max-w-none"><p>Here's a detailed report based on the analysis of the documents:</p>
+<pre><code class="language-json">{
+  &quot;documents&quot;: {
+    &quot;LEASEAGREEMENT.txt&quot;: {
+      &quot;valuation&quot;: null,
+      &quot;potential_conflicts&quot;: [
+        {
+          &quot;issue&quot;: &quot;Riba (Interest)&quot;,
+          &quot;description&quot;: &quot;The agreement includes interest rates which are prohibited under Shariah law.&quot;,
+          &quot;ramifications&quot;: &quot;Non-compliance with Islamic finance principles.&quot;
+        },
+        {
+          &quot;issue&quot;: &quot;Seniority Conflict&quot;,
+          &quot;description&quot;: &quot;Potential conflict with token holders regarding cash flow priority.&quot;,
+          &quot;ramifications&quot;: &quot;Could lead to legal disputes between the lender and token holders.&quot;
+        },
+        {
+          &quot;issue&quot;: &quot;Occupancy Requirement&quot;,
+          &quot;description&quot;: &quot;The borrower must maintain a minimum occupancy of 75%.&quot;,
+          &quot;ramifications&quot;: &quot;Challenging to maintain, could lead to default.&quot;
+        },
+        {
+          &quot;issue&quot;: &quot;Property Value Depreciation&quot;,
+          &quot;description&quot;: &quot;A decrease in property value by more than 20% is an event of default.&quot;,
+          &quot;ramifications&quot;: &quot;Could lead to financial instability and default.&quot;
+        }
+      ],
+      &quot;shariah_compliance&quot;: &quot;Non-compliant due to interest.&quot;,
+      &quot;legal_compliance&quot;: {
+        &quot;SAMA&quot;: &quot;Potential license requirement for lender.&quot;,
+        &quot;CMA&quot;: &quot;May require registration and licensing.&quot;,
+        &quot;FATF&quot;: &quot;Lack of explicit AML/KYC procedures.&quot;
+      }
+    },
+    &quot;PROPERTYVALUATIONREPORT1.txt&quot;: {
+      &quot;valuation&quot;: &quot;SAR 120,000,000&quot;,
+      &quot;potential_conflicts&quot;: [],
+      &quot;shariah_compliance&quot;: &quot;Compliant&quot;,
+      &quot;legal_compliance&quot;: {
+        &quot;SAMA&quot;: &quot;Compliant&quot;,
+        &quot;CMA&quot;: &quot;Compliant for internal use&quot;,
+        &quot;FATF&quot;: &quot;Compliant&quot;
+      }
+    },
+    &quot;PROPERTYVALUATIONREPORT2.txt&quot;: {
+      &quot;valuation&quot;: &quot;SAR 150,000,000&quot;,
+      &quot;potential_conflicts&quot;: [],
+      &quot;shariah_compliance&quot;: &quot;Compliant&quot;,
+      &quot;legal_compliance&quot;: {
+        &quot;SAMA&quot;: &quot;Compliant&quot;,
+        &quot;CMA&quot;: &quot;Compliant for internal use&quot;,
+        &quot;FATF&quot;: &quot;Compliant&quot;
+      }
+    }
+  },
+  &quot;cross_document_inconsistencies&quot;: [
+    {
+      &quot;issue&quot;: &quot;Valuation Discrepancy&quot;,
+      &quot;description&quot;: &quot;Report 1 values the property at SAR 120,000,000, while Report 2 values it at SAR 150,000,000.&quot;,
+      &quot;ramifications&quot;: &quot;25% difference could impact lending decisions and investor confidence.&quot;
+    },
+    {
+      &quot;issue&quot;: &quot;Assumptions Variability&quot;,
+      &quot;description&quot;: &quot;Report 1 uses conservative assumptions, while Report 2 uses aggressive assumptions.&quot;,
+      &quot;ramifications&quot;: &quot;Could lead to different strategic decisions regarding asset management and investment.&quot;
+    }
+  ],
+  &quot;overall_confidence_score&quot;: 0.75,
+  &quot;recommendations&quot;: [
+    &quot;Restructure LEASEAGREEMENT.txt to remove interest-based elements.&quot;,
+    &quot;Reconcile differences between the two valuation reports.&quot;,
+    &quot;Ensure compliance with SAMA and FATF for LEASEAGREEMENT.txt.&quot;,
+    &quot;Consider data protection and privacy measures for valuation reports.&quot;
+  ]
+}
+</code></pre>
+<h3>Summary</h3>
+<ul>
+<li><strong>LEASEAGREEMENT.txt</strong> has significant issues with Shariah compliance due to interest and potential legal conflicts regarding cash flow priority.</li>
+<li><strong>PROPERTYVALUATIONREPORT1.txt</strong> and <strong>PROPERTYVALUATIONREPORT2.txt</strong> are compliant but show a significant discrepancy in valuation, which needs reconciliation.</li>
+<li>The overall confidence score is 0.75, indicating moderate confidence in the current documentation and compliance status.</li>
+</ul>
+</div>
+        
+        
+    </div>
+</div>
+
+
+                </div>
+            </main>
+
+            
+            <aside class="hidden lg:flex w-64 border-l border-border p-4 flex-col gap-6 overflow-y-auto">
+                
+                <div>
+                    <div class="text-muted-foreground text-xs mb-2 border-b border-border pb-1">Session</div>
+                    <div class="text-sm font-medium truncate">Comprehensive Analysis of Lease and Valuation Reports</div>
+                    <div class="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                        <span class="inline-block w-2 h-2 rounded-full bg-tui-green"></span>
+                        Apr 25, 2026
+                    </div>
+                </div>
+
+                
+                <div>
+                    <div class="text-muted-foreground text-xs mb-2 border-b border-border pb-1">Agent</div>
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-tui-cyan font-medium text-sm">root</span>
+                        </div>
+                        <div class="text-xs text-muted-foreground">Almikial Tokenization Manager - Coordinates entire tokenization workflow</div>
+                    </div>
+                </div>
+
+                
+                <div>
+                    <div class="text-muted-foreground text-xs mb-2 border-b border-border pb-1">Tools</div>
+                    <div class="text-sm">4 tools used</div>
+                </div>
+
+                
+                <div>
+                    <div class="text-muted-foreground text-xs mb-2 border-b border-border pb-1">Token Usage</div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden">
+                            <div class="h-full bg-tui-cyan rounded-full" style="width: min(5599 / 2000, 100)%"></div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-muted-foreground mt-1">
+                        5.6K tokens<span class="text-tui-green ml-2">$0.11</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        
+        <footer class="border-t border-border px-4 py-3 text-center text-muted-foreground text-xs">
+            Exported from <a href="https://github.com/docker/docker-agent" class="text-tui-cyan no-underline hover:underline">Docker Agent</a>
+        </footer>
+    </div>
+    <script>
+function toggle(header) {
+    const content = header.nextElementSibling;
+    const chevronRight = header.querySelector('.chevron-right');
+    const chevronDown = header.querySelector('.chevron-down');
+    const isHidden = content.style.display === 'none';
+    content.style.display = isHidden ? 'block' : 'none';
+    if (chevronRight) chevronRight.style.display = isHidden ? 'none' : 'block';
+    if (chevronDown) chevronDown.style.display = isHidden ? 'block' : 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.collapsible-content').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.chevron-right').forEach(icon => icon.style.display = 'block');
+        document.querySelectorAll('.chevron-down').forEach(icon => icon.style.display = 'none');
+    }
+});
+    </script>
+</body>
+</html>
